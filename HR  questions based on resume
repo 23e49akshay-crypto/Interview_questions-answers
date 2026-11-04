@@ -1,0 +1,416 @@
+Akshay_Gabrieal_resume1 based 
+
+self-introduction
+
+
+Good morning, sir.
+
+My name is Akshay Gabrieal R, and I am currently pursuing my final year of B.Tech in Computer Science Engineering at St. Joseph’s Engineering College, Mangaluru.
+
+I am passionate about building software and AI-powered applications, particularly in the areas of Artificial Intelligence, Machine Learning, and Generative AI. Through my projects, internships, and online courses, I have been exploring these technologies and applying my knowledge to solve real-world problems.
+
+One project I am particularly proud of is my Women Safety App, which focuses on addressing women's safety concerns through technology. Working on this project helped me understand the problem more deeply and explore how a practical software solution could help. I am also working on my final-year project, Farm Marketplace, a mobile application designed to connect farmers directly with customers, helping them sell their produce online and reduce their dependence on middlemen.
+
+Apart from technology, I was an NCC Naval Wing cadet and represented the Karnataka and Goa Directorate at a national-level Idea and Innovation Competition. I have also represented my region in state-level hockey and participated in state-level marathon events. These experiences have taught me discipline, teamwork, leadership, perseverance, and how to face challenges with a positive mindset.
+
+Currently, I am looking for an opportunity where I can strengthen my technical skills, contribute to real-world projects, learn from experienced professionals, and grow as an AI and software engineer&#32;
+
+Thank you.
+
+
+
+
+WALK ME THROUGH YOUR RESUME
+
+
+Good morning, sir. Certainly.
+
+My name is Akshay Gabrieal R, and I am currently pursuing my final year of B.Tech in Computer Science Engineering at St. Joseph's Engineering College, Mangaluru.
+
+Throughout my engineering journey, I have developed a strong interest in software development, Artificial Intelligence, Machine Learning, and Generative AI. I have been learning these areas through academic learning, online courses, internships, certifications, and practical projects.
+
+Coming to my technical skills, Python is one of my main programming languages, and I have also worked with SQL and C. In software development, I have explored technologies such as Node.js, FastAPI, Flask, REST APIs, Firebase, Supabase, and Git/GitHub. On the AI side, I have been learning Machine Learning, Generative AI, LLMs, RAG, embeddings, AI agents, and related tools.
+
+Coming to my projects, one project that I am particularly proud of is RakshaNet, a Women Safety App. The idea was to explore how technology could help during emergency situations through features such as SOS alerts, location sharing, and emergency communication.
+
+Another project is CarbonMind AI, a sustainability-focused application that estimates a user's carbon footprint and generates personalized eco-friendly action plans. This project helped me explore how Python, data processing, AI/ML concepts, and Generative AI tools could be combined to solve a real-world problem.
+
+Currently, I am working on my final-year project, Farm Marketplace. The objective is to create a digital marketplace connecting farmers, buyers, and delivery partners. The project also explores the use of an AI agent for order-related assistance and a blockchain-based trust layer.
+
+I have also gained practical exposure through virtual internships. As an AI and Automation Intern at BharatCares, I worked on a Prompt-to-App concept and explored areas such as Generative AI, Agentic AI, AI automation, and intelligent virtual agents. I also completed an AI and Cloud internship through Edunet Foundation and IBM SkillsBuild, where I gained exposure to developing and deploying a machine learning solution using Python and IBM Cloud.
+
+Apart from academics and technology, I was an NCC Naval Wing cadet and represented the Karnataka and Goa Directorate at a national-level Idea and Innovation Competition. I have also participated in state-level sports, including hockey, floorball, and athletics. These experiences helped me develop discipline, teamwork, leadership, and resilience.
+
+One of my technical achievements was building CarbonMind AI during Google PromptWars Challenge 4, where I was ranked among the Top 1,000 participants out of more than 35,000 participants.
+
+Overall, my journey so far has helped me develop a combination of technical curiosity, practical project experience, discipline, and a willingness to continuously learn. As a fresher, I am now looking for an opportunity where I can strengthen my engineering Skills , contribute to real-world projects, learn from experienced professionals, and grow as a software and AI engineer.
+
+
+
+
+
+EXPLAIN YOUR MOST CHALLENGING PROJECT: FARM MARKETPLACE
+
+
+Farm Marketplace is my final-year project and one of the most challenging projects I have worked on because it combines multiple areas of technology and addresses a real-world problem.
+
+The main problem we wanted to address is the difficulty farmers can face in directly reaching buyers. In a traditional supply chain, there can be multiple intermediaries between farmers and customers. Our objective is to build a digital marketplace where farmers can list their agricultural products and connect more directly with buyers.
+
+The platform is designed around multiple users, mainly farmers, buyers, and delivery partners. Farmers can list their products, buyers can browse and place orders, and delivery partners can handle the logistics side.
+
+One of the interesting parts of the project is the AI agent concept. The purpose of the AI component is to assist with organizing and managing order-related activities. We are also exploring a blockchain-based trust layer to improve transparency and trust in certain transactions or records.
+
+From a technical perspective, the challenging part is not just building individual features, but integrating multiple components into one system. We have to think about user roles, order management, communication between the application and backend, data storage, delivery workflows, and how the AI and blockchain components can add real value instead of simply being included as technologies.
+
+The biggest learning from this project has been understanding that a real-world application is not only about writing code. It requires good system design, clear responsibilities, integration between components, handling real user workflows, and making practical technology decisions.
+
+Going forward, we want to further improve the platform's reliability, scalability, AI capabilities, and trust mechanisms based on real user requirements.
+
+
+Likely follow-up questions
+You must prepare for these:
+1. Why do you need blockchain here?
+2. What exact problem does the AI agent solve?
+3. What did YOU personally build?
+4. What database are you using and why?
+5. How does an order move from farmer to buyer to delivery partner?
+6. What happens when a farmer has insufficient stock?
+7. How would you scale this application?
+8. Why not build this as a normal e-commerce platform?
+9. What is currently completed?
+10. What is proposed for the future?
+
+For example:
+- Did you build the frontend?
+- Backend APIs?
+- Database?
+- AI agent?
+- Delivery partner module?
+- Blockchain?
+- Authentication?
+
+
+
+
+
+
+WHAT WAS YOUR SPECIFIC ROLE IN THE WOMEN SAFETY APP
+
+In the Women Safety App, RakshaNet, my main contribution was working on the concept and development of the safety solution and helping translate the real-world problem into practical application features.
+
+The core idea of the project was to provide a quick way for a user to request help during an emergency. We focused on features such as a one-tap SOS mechanism and location sharing so that emergency information could be communicated quickly.
+
+I was also involved in exploring the application design and the technologies required for the solution. Firebase was used for backend-related services, while map functionality was integrated to support location visualization.
+
+One of the most challenging ideas we explored was providing emergency support in situations with poor or limited internet connectivity. This led us to explore mesh networking and peer-to-peer emergency communication concepts.
+
+My biggest contribution and learning from the project was understanding how to move from identifying a social problem to designing a practical technical solution. It also helped me understand the importance of user experience, emergency workflows, location services, backend integration, and the limitations of real-world connectivity.
+
+Since safety applications are sensitive and real-world reliability is extremely important, I would also clearly mention the current limitations of the prototype and the areas that would require further testing and development before considering it a production-ready safety solution.
+
+
+
+
+
+
+
+TELL ME ABOUT A TIME A TECHNICAL PROJECT FAILED OR MISSED A DEADLINE
+
+One situation that taught me an important lesson was during a project where we had planned multiple features and initially underestimated the time required for integrating and testing everything.
+
+We were focused on adding several features, but as development progressed, we faced technical issues and integration took longer than we had expected. Because of that, we had to revise our timeline and prioritize the most important functionality instead of trying to complete everything at once.
+
+My approach was first to identify what was actually blocking progress rather than simply continuing to add more features. We divided the remaining work into smaller tasks, prioritized the core functionality, and focused on getting the most important features working properly.
+
+I also learned the importance of communicating early when there is a risk of delay. Instead of hiding the problem, it is better to explain the technical issue, discuss the available options, and create a realistic plan.
+
+The main lesson I learned was that project planning should include time for debugging, integration, and testing, not only for writing code. Since then, I have tried to break projects into smaller milestones and regularly check progress against the planned timeline.
+
+
+
+
+
+
+
+
+
+HOW DO YOU KEEP YOUR TECHNICAL SKILLS CURRENT?
+
+
+Technology changes quickly, especially in areas such as AI and software development, so I try not to depend only on what I learn in the classroom.
+
+My main approach is to learn continuously through a combination of structured courses, technical documentation, practical projects, and hands-on experimentation,youtube videos&#x20;
+
+For example, when I learn about a new technology, I try to understand the fundamentals first and then apply it in a small project or feature. I find that building something practical helps me understand the technology much better than only watching tutorials.
+
+I also follow updates through official documentation, technical communities, learning platforms, and developer resources. However, I try to avoid learning every new tool immediately just because it is trending. I first try to understand the underlying concepts, because tools and frameworks can change, but strong fundamentals remain useful.
+
+My current focus is strengthening my core engineering fundamentals while continuing to develop practical knowledge in AI, backend development, and cloud technologies.
+
+I believe continuous learning is especially important as a fresher, and I see my first job as an opportunity to learn from experienced engineers while contributing through the skills I already have.
+
+
+
+
+
+
+
+
+
+
+
+TELL ME ABOUT A TEAM DISAGREEMENT
+
+During a group project, we had different opinions about how we should approach a particular part of the project. The disagreement was mainly about which approach or technology would be more practical for our requirements.
+
+Instead of focusing on whose idea was better, we tried to bring the discussion back to the actual requirements of the project.
+
+We discussed the advantages and limitations of each option, considering factors such as development time, complexity, our existing knowledge, and whether the approach was realistic for the project timeline.
+
+Where possible, we also discussed small experiments or prototypes instead of making the decision only based on opinions.
+
+Finally, we selected the approach that best matched the project's requirements and the team's capabilities.
+
+The main lesson I learned was that technical disagreements are normal in a team. The important thing is to keep the discussion focused on the problem, listen to different viewpoints, and make decisions based on evidence and practical requirements rather than ego.
+
+I believe a good team does not need everyone to have the same opinion. What matters is being able to discuss differences professionally and move forward together.
+
+
+
+
+
+
+
+
+
+
+WHY DID YOU CHOOSE COMPUTER SCIENCE ENGINEERING
+
+
+I chose Computer Science Engineering because I was interested in understanding how technology can be used to solve practical problems.
+
+What attracted me to computer science was that it combines logical thinking with creativity. You can start with a problem, break it down into smaller parts, and build a software solution that can potentially help many people.
+
+As I progressed through my engineering studies, my interest became stronger through software development, and later areas such as Artificial Intelligence and Machine Learning.
+
+Projects were especially important in helping me understand that I enjoy not only learning technical concepts but also applying them to build something practical.
+
+That is why I gradually developed an interest in becoming a software engineer with strong exposure to AI and intelligent applications.
+
+
+
+
+
+
+
+
+DID CSE LIVE UP TO YOUR EXPECTATIONS
+
+
+Yes, overall, Computer Science Engineering has lived up to my expectations, although it has also taught me that the real field is much broader than I initially imagined.
+
+When I started, I mainly associated computer science with programming and building applications. But during my engineering , I was exposed to areas such as databases, networking, software engineering, cloud computing, Artificial Intelligence, and Machine Learning.
+
+One thing I learned is that completing academic coursework is only the foundation. Technology changes continuously, so practical projects, self-learning, and experimentation are equally important.
+
+My internships and projects helped me connect the theoretical concepts I learned with practical applications.
+
+So overall, CSE met my expectations, but it also showed me that becoming a good engineer requires continuous learning beyond the classroom.
+
+
+
+
+
+
+
+
+You have many certifications. Which one was most valuable
+
+
+Among the certifications and learning programs I have completed, the most valuable ones were those that helped me move from simply learning concepts to applying them practically.
+
+For example, my learning in AI, Machine Learning using Python, and cloud technologies helped me better understand how an application or model can move from development toward practical deployment.
+
+However, I do not consider a certificate alone as proof of mastery. For me, the real value comes from understanding the concepts and applying them in projects.
+
+That is why I try to connect what I learn through courses or certifications with practical work. My projects have helped me understand the limitations, challenges, and real-world applications of the technologies I study.
+
+As a fresher, I see certifications as part of my learning journey, while practical projects and continuous learning are how I strengthen that knowledge further.
+
+
+
+
+
+
+
+
+THIS IS YOUR FIRST JOB. WHAT ARE YOUR EXPECTATIONS
+
+
+Since this would be my first full-time professional role, my main expectation is to get the opportunity to work on real engineering problems and learn from experienced professionals.
+
+I want to understand how software is developed in a professional environment, including areas such as teamwork, code reviews, testing, debugging, deployment, and maintaining real applications.
+
+At the same time, I also want to contribute through the skills and knowledge I already have rather than expecting only training.
+
+As a fresher, I understand that I still have a lot to learn. So I am looking for an environment where I can take responsibility, receive constructive feedback, continuously improve, and gradually grow into a dependable engineer.
+
+
+
+
+
+WHERE DO YOU SEE YOURSELF IN 3–5 YEARS
+
+
+In the next three to five years, I would like to grow from a fresher into a strong and dependable engineer who can take ownership of important technical problems.
+
+In the initial years, my main focus would be on building strong engineering fundamentals, learning professional development practices, and gaining experience by working on real-world systems.
+
+As I gain more experience, I would like to take greater responsibility for designing and developing solutions, contributing to important projects, and becoming someone whom the team can rely on.
+
+Given my interest in both software engineering and AI, I would also like to develop deeper expertise in building practical AI-powered applications.
+
+However, my immediate priority is to learn, contribute effectively, and build a strong foundation rather than focusing only on a particular title or position.
+
+
+
+
+
+
+
+
+Why should we hire you
+
+
+As a fresher, I would not claim to have the experience of an established engineer, but I believe I can bring strong learning ability, practical project exposure, and a disciplined approach to work.
+
+My background has given me exposure to software development, AI and Machine Learning, cloud technologies, and practical projects. Through NCC and sports, I have also developed qualities such as teamwork, discipline, consistency, and the ability to handle challenges.
+
+I am comfortable learning new technologies and working through problems rather than expecting to know everything from the beginning.
+
+If given the opportunity, I believe I can contribute with my current skills while continuously learning and growing into a dependable member of the team.
+
+
+
+
+
+
+. What are your strengths?
+Your best strengths are:
+
+Learning ability → Discipline → Teamwork → Resilience
+
+One of my main strengths is my willingness to learn and adapt. When I become interested in a technical area, I try to move beyond theory and understand it through practical projects and experimentation.
+
+Another important strength is discipline and consistency. My experience in NCC and sports has taught me the importance of preparation, teamwork, and continuing to work even when things become challenging.
+
+I would also say that I am comfortable asking questions and learning from feedback, which I believe is especially important as a fresher entering a professional environment.
+
+
+
+
+
+
+
+
+
+What is your weakness
+
+
+One area I am actively working on is balancing my interest in exploring many technologies with developing deeper expertise in the most important ones.
+
+Because I am interested in areas such as software development, AI, Machine Learning, and Generative AI, earlier I sometimes tried to explore too many technologies at the same time.
+
+Over time, I realized that breadth is useful, but strong fundamentals and depth are more important.
+
+So now I am becoming more structured in my learning by prioritizing core skills, strengthening fundamentals, and applying what I learn through projects rather than constantly moving to a new technology.
+
+
+
+
+
+What is your biggest achievement?
+You have several options:
+- NCC national representation
+- CarbonMind Top 1,000/35,000+
+- Top technical project selection if applicable
+- State-level sports
+
+
+
+
+What motivates you?
+A natural answer for you:
+“I am motivated by seeing an idea gradually become something practical. Whether it is solving a problem through software or learning a difficult technology, I enjoy the process of understanding the problem, building a solution, and improving it.”
+
+
+
+
+
+
+
+How do you handle pressure?
+Your NCC + sports background is strong evidence.
+
+Use:
+
+Preparation → Prioritization → Staying calm → Communication
+
+
+
+
+
+8. What makes you different from other candidates?
+Don't say:
+
+❌ “I am better than everyone.”
+
+Say:
+“I think my combination of technical curiosity and experiences outside academics is one thing that differentiates me. Along with my interest in software and AI, my experience in NCC and competitive sports has helped me develop discipline, teamwork, and resilience.”
+
+
+
+
+
+
+
+Walk me through your resume.
+Tell me about yourself.
+Explain Farm Marketplace.
+What exactly is your contribution to Farm Marketplace?
+Explain RakshaNet.
+Did you actually implement mesh networking? How?
+Explain CarbonMind AI technically.
+What did you do during BharatCares internship?
+What did you build during the IBM/Edunet internship?
+Explain your Google PromptWars achievement.
+Why CSE?
+Why should we hire you?
+What are your strengths and weaknesses?
+Tell me about a failure or setback.
+Tell me about a team disagreement.
+
+
+
+
+MEDIUM PRIORITY
+16. Why AI/ML?
+17. Why software engineering?
+18. Which technology are you strongest in?
+19. Which technology on your resume are you still learning?
+20. How do you learn new technologies?
+21. Which project taught you the most?
+22. What would you improve in your projects?
+23. How do you handle criticism?
+24. How do you handle pressure?
+25. Are you comfortable working in a team?
+26. Are you willing to relocate?
+27. Where do you see yourself in five years?
+28. What are your expectations from your first job?
+
+
+
+
+
+
+
