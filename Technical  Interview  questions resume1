@@ -1,0 +1,1006 @@
+REST API — Interview-Ready Deep Explanation
+If the interviewer asks “What is a REST API?”, don't just say “REST API is used for communication.” Explain the idea behind it.
+
+1. What is a REST API?
+REST API stands for Representational State Transfer Application Programming Interface.
+
+It is a way for different software applications to communicate with each other over HTTP using standard operations such as:
+
+GET → retrieve data
+POST → create data
+PUT → update/replace data
+PATCH → partially update data
+DELETE → delete data
+Simple example
+Imagine your Farm Marketplace application.
+
+You have:
+
+React Native App
+       ↓
+     HTTP
+       ↓
+    REST API
+       ↓
+    Backend
+       ↓
+   Database
+When a user wants to see all products:
+
+GET /api/products
+The backend retrieves products from the database and sends a response, usually as JSON:
+
+[
+  {
+    "id": 1,
+    "name": "Tomato",
+    "price": 40
+  },
+  {
+    "id": 2,
+    "name": "Potato",
+    "price": 30
+  }
+]
+2. Why do we need REST APIs?
+Suppose your frontend directly accesses your database.
+
+Mobile App ─────────→ Database
+That's a bad architecture because the mobile app would need to know:
+
+database credentials
+database structure
+SQL queries
+business logic
+authentication rules
+Instead:
+
+Mobile App
+    ↓
+ REST API
+    ↓
+Backend
+    ↓
+Database
+The API acts as a controlled middle layer.
+
+The frontend says:
+
+"Give me the products."
+
+The backend decides:
+
+"Is this user allowed? What data should I retrieve? What business rules apply?"
+
+Then the backend communicates with the database.
+
+Real-world analogy
+Think of a restaurant:
+
+You → Waiter → Kitchen
+You don't enter the kitchen and cook your own food.
+
+The waiter is like the API.
+
+You make a request:
+
+"Give me a burger."
+
+The waiter communicates with the kitchen and brings the result back.
+
+3. What exactly is an API?
+API = Application Programming Interface.
+
+It defines how one software component can interact with another.
+
+For example:
+
+GET /users/101
+means:
+
+"Give me information about user 101."
+
+The client doesn't need to know how the server gets the information.
+
+That's abstraction.
+
+4. What makes an API RESTful?
+REST is an architectural style. A RESTful API generally follows several principles.
+
+The most important ones for interviews are:
+
+1. Client-Server
+Client and server are separated.
+
+Client
+  ↓
+API
+  ↓
+Server
+The client handles the UI.
+
+The server handles:
+
+business logic
+authentication
+database operations
+processing
+
+
+
+
+
+
+
+FastAPI vs Flask
+1. First: What are they?
+Both FastAPI and Flask are Python web frameworks.
+
+They help you build:
+
+Web applications
+REST APIs
+Backend services
+Microservices
+Database-backed applications
+Without a framework, handling HTTP requests manually would be complicated.
+
+Think:
+
+                    Python
+                      │
+          ┌───────────┴───────────┐
+          ↓                       ↓
+        Flask                  FastAPI
+          │                       │
+          └──────────┬────────────┘
+                     ↓
+                  Backend
+                     ↓
+                 REST API
+                     ↓
+                  Database
+2. Flask
+What is Flask?
+Flask is a lightweight Python web framework used to build web applications and APIs.
+
+It is often called a microframework because it provides the basic functionality and lets you add additional components as needed.
+
+
+
+What is FastAPI?
+
+FastAPI is a modern Python web framework designed primarily for building APIs.
+
+Why was FastAPI created?
+FastAPI was designed to make building APIs:
+
+Fast
+Type-safe
+Easy to validate
+Easy to document
+Friendly to modern Python
+Suitable for asynchronous applications
+
+One of its major features is that it uses Python type hints.
+
+
+
+
+
+Pydantic — important FastAPI concept
+
+FastAPI heavily uses Pydantic for data validation and serialization.
+
+
+
+
+
+                 PYTHON BACKEND
+                       │
+              ┌────────┴────────┐
+              ↓                 ↓
+            Flask            FastAPI
+              │                 │
+        Lightweight          API-focused
+        Flexible             Type hints
+        Microframework       Pydantic
+        WSGI ecosystem       ASGI
+                              │
+                       Async support
+                              │
+                     Automatic API docs
+
+
+
+
+
+
+
+
+
+
+
+
+
+ What is Machine Learning?
+Machine Learning (ML) is a branch of Artificial Intelligence where we build systems that learn patterns from data and use those patterns to make predictions or decisions, rather than explicitly programming every rule.
+
+Traditional programming
+Suppose you want to determine whether an email is spam.
+
+You might manually create rules:
+
+IF email contains "WIN MONEY"
+    → Spam
+
+IF email contains "FREE"
+    → Spam
+This becomes difficult because there can be millions of patterns.
+
+Machine Learning
+Instead:
+
+Historical Emails
+       ↓
+   ML Algorithm
+       ↓
+Learn patterns
+       ↓
+    ML Model
+       ↓
+New Email
+       ↓
+Prediction
+       ↓
+Spam / Not Spam
+The model learns the relationship from examples.
+
+2. Why do we need Machine Learning?
+The key question is:
+
+Why not just write normal if-else rules?
+
+Because many real-world problems have too many complex or changing rules to program manually.
+
+Examples:
+
+Face recognition
+You can't realistically write:
+
+IF nose = this shape
+AND eyes = this distance
+AND face = this pattern...
+Instead, provide many examples of faces and let the model learn patterns.
+
+Recommendation systems
+Netflix/YouTube/Amazon can't manually write a rule for every individual user.
+
+ML can learn:
+
+User behavior
+     +
+Previous interactions
+     +
+Similar users
+     ↓
+Prediction
+     ↓
+Recommended content
+3. Machine Learning vs Traditional Programming
+This is an excellent interview comparison.
+
+Traditional programming
+INPUT + RULES
+     ↓
+   OUTPUT
+You provide the rules.
+
+Machine Learning
+INPUT + OUTPUT EXAMPLES
+          ↓
+      ML ALGORITHM
+          ↓
+         MODEL
+          ↓
+    New INPUT → OUTPUT
+The algorithm learns the rules/patterns from data.
+
+4. Important distinction: AI vs ML vs Deep Learning
+Interviewers love this.
+
+Artificial Intelligence
+        │
+        └── Machine Learning
+                │
+                └── Deep Learning
+AI
+Broad field of making machines perform tasks associated with intelligence.
+
+ML
+Subset of AI where systems learn patterns from data.
+
+Deep Learning
+Subset of ML using multi-layer neural networks.
+
+So:
+
+Every deep-learning system is machine learning, but not every machine-learning system is deep learning.
+
+5. How does Machine Learning work?
+The basic workflow:
+
+
+1. Collect Data
+       ↓
+2. Clean Data
+       ↓
+3. Explore Data
+       ↓
+4. Prepare Features
+       ↓
+5. Split Data
+       ↓
+6. Choose Algorithm
+       ↓
+7. Train Model
+       ↓
+8. Evaluate Model
+       ↓
+9. Tune Model
+       ↓
+10. Deploy
+       ↓
+11. Monitor
+
+
+
+
+Types of Machine Learning
+
+There are three major categories you should know.
+
+
+Machine Learning
+│
+├── Supervised Learning
+│
+├── Unsupervised Learning
+│
+└── Reinforcement Learning
+
+
+
+
+Two major types
+
+Supervised Learning
+       │
+       ├── Regression
+       │
+       └── Classification
+
+
+
+Regression
+
+Predict a continuous numerical value.
+
+
+Examples:
+
+
+House price → ₹70 lakh
+Temperature → 32.5°C
+Salary → ₹8.2 lakh
+Sales → ₹2.5 million
+
+Common algorithms:
+
+
+
+
+Linear Regression
+
+
+Decision Tree Regression
+
+
+Random Forest Regression
+
+
+
+
+Classification
+
+Predict a category/class.
+
+
+Examples:
+
+
+Email → Spam
+Transaction → Fraud
+Image → Cat
+Customer → Churn / Not Churn
+
+Common algorithms:
+
+
+
+
+Logistic Regression
+
+
+Decision Tree
+
+
+Random Forest
+
+
+
+
+ Unsupervised Learning
+
+Here, we don't have labeled answers.
+
+
+We give the algorithm data and ask it to discover patterns.
+
+
+Data
+ ↓
+Algorithm
+ ↓
+Hidden patterns/groups
+
+Example: Customer segmentation
+
+Suppose an e-commerce company has:
+
+
+Customer
+Age
+Income
+Purchases
+Browsing behavior
+
+There may be groups such as:
+
+
+Group A → frequent high-value customers
+Group B → occasional customers
+Group C → discount-focused customers
+
+The algorithm discovers these groups.
+
+
+A common technique:
+
+
+K-Means Clustering
+
+
+
+
+
+Reinforcement Learning
+
+This works differently.
+
+
+An agent interacts with an environment and learns through rewards and penalties.
+
+
+       Action
+Agent ─────────→ Environment
+  ↑                    │
+  │                    ↓
+  └──── Reward ────────┘
+
+Example:
+
+
+A game-playing AI:
+
+
+Move
+ ↓
+Game
+ ↓
+Reward
+ ↓
+Learn
+ ↓
+Better move
+
+The goal is to learn a strategy that maximizes cumulative reward.
+
+
+
+
+
+
+ Training vs Testing
+
+This is very important.
+
+
+Suppose we have:
+
+
+1000 data samples
+
+We might split:
+
+
+800 → Training
+200 → Testing
+
+Training data
+
+Used to learn the model.
+
+
+Testing data
+
+Used to evaluate how the trained model performs on unseen data.
+
+
+Why?
+
+
+Because we don't want:
+
+
+
+"The model memorized the training data."
+
+
+
+We want:
+
+
+
+"The model learned patterns that generalize to new data."
+
+
+
+
+15. What is Overfitting?
+
+One of the most common ML interview questions.
+
+
+Imagine a student memorizes every question from a previous exam.
+
+
+They get:
+
+
+Previous questions → 100%
+
+But when the questions change:
+
+
+New questions → 50%
+
+That's similar to overfitting.
+
+
+In ML:
+
+
+Training performance → Very high
+Testing performance  → Poor
+
+The model has learned the training data too specifically.
+
+
+
+16. Underfitting
+
+The opposite.
+
+
+The model is too simple to capture the underlying pattern.
+
+
+Training → Poor
+Testing  → Poor
+
+So:
+
+
+Underfitting
+→ Model too simple
+
+Good fit
+→ Learns useful patterns
+
+Overfitting
+→ Model memorizes training patterns
+
+
+17. How do we reduce overfitting?
+
+Common techniques:
+
+
+
+
+More training data
+
+
+Regularization
+
+
+Cross-validation
+
+
+Feature selection
+
+
+Data augmentation
+
+
+Early stopping
+
+
+Simplifying the model
+
+
+Dropout for neural networks
+
+
+
+18. What is an ML Algorithm?
+
+An algorithm is the learning procedure used to learn patterns from data.
+
+
+Examples:
+
+
+Linear Regression
+Decision Tree
+Random Forest
+K-Means
+SVM
+Neural Network
+
+The algorithm learns parameters from the data to create a model.
+
+
+
+19. Algorithm vs Model
+
+This distinction can impress an interviewer.
+
+
+Algorithm
+
+The learning procedure.
+
+
+Example:
+
+
+Linear Regression algorithm
+
+Model
+
+The trained result after learning from data.
+
+
+Training Data
+      ↓
+Linear Regression Algorithm
+      ↓
+Trained Regression Model
+
+
+20. Loss Function
+
+Another important concept.
+
+
+The model makes a prediction:
+
+
+Actual = 100
+Predicted = 80
+
+There is an error.
+
+
+A loss function measures how bad the prediction is.
+
+
+
+
+
+Gradient Descent
+
+How does a model actually improve its parameters?
+
+
+One common optimization technique is Gradient Descent.
+
+
+Imagine you're standing on a mountain and want to reach the lowest point.
+
+
+       ●
+      /
+     /
+    ●
+   /
+  ●
+ ↓
+Minimum
+
+The algorithm repeatedly adjusts parameters in the direction that reduces the loss.
+
+
+
+
+
+What is Accuracy?
+
+Suppose:
+
+
+100 predictions
+90 correct
+
+Accuracy:
+
+
+
+But accuracy isn't always the right metric.
+
+
+Suppose fraud detection has:
+
+
+990 legitimate transactions
+10 fraudulent transactions
+
+
+
+
+ Precision and Recall
+
+For classification:
+
+
+Precision
+
+Of everything predicted positive:
+
+
+
+How many were actually positive?
+
+
+
+
+Recall
+
+Of everything that was actually positive:
+
+
+
+How many did we correctly identify?
+
+
+
+
+This is frequently asked in interviews.
+
+
+
+
+
+Confusion Matrix
+
+For binary classification:
+
+
+                  Predicted
+                Positive Negative
+Actual Positive    TP       FN
+       Negative    FP       TN
+
+Where:
+
+
+TP → True Positive
+TN → True Negative
+FP → False Positive
+FN → False Negative
+
+
+
+
+Workflow:
+
+
+Customer Data
+     ↓
+Data Cleaning
+     ↓
+Feature Engineering
+     ↓
+Train/Test Split
+     ↓
+Random Forest
+     ↓
+Training
+     ↓
+Evaluation
+     ↓
+Deploy
+
+
+
+
+ Machine Learning vs Deep Learning
+
+Traditional ML
+
+Often works well with structured/tabular data.
+
+
+Examples:
+
+
+CSV
+SQL tables
+Customer records
+Financial data
+
+Algorithms:
+
+
+Random Forest
+XGBoost
+Logistic Regression
+SVM
+
+Deep Learning
+
+Uses neural networks with multiple layers.
+
+
+Especially useful for:
+
+
+Images
+Speech
+Natural Language
+Video
+Complex unstructured data
+
+Examples:
+
+
+CNN
+RNN
+LSTM
+Transformer
+
+
+28. Interview Answer — 30 seconds
+
+If the interviewer asks:
+
+
+
+"What is Machine Learning?"
+
+
+
+Give this:
+
+
+Interview Answer
+Machine Learning is a subset of Artificial Intelligence where a system learns patterns from data and uses those patterns to make predictions or decisions on new data, instead of relying on explicitly programmed rules for every case. The general process involves collecting and preprocessing data, selecting relevant features, splitting the data into training and testing sets, training a model, evaluating its performance, and then deploying it for predictions. For example, we can train a classification model using historical customer data to predict whether a new customer is likely to churn.
+
+
+
+
+
+Follow-up questions you MUST prepare
+
+For tomorrow, after understanding ML, make sure you can explain these:
+
+
+Machine Learning
+       │
+       ├── Supervised Learning
+       │      ├── Regression
+       │      └── Classification
+       │
+       ├── Unsupervised Learning
+       │      └── Clustering
+       │
+       ├── Reinforcement Learning
+       │
+       ├── Training / Testing
+       │
+       ├── Overfitting / Underfitting
+       │
+       ├── Features / Labels
+       │
+       ├── Loss Function
+       │
+       ├── Gradient Descent
+       │
+       ├── Accuracy
+       │
+       ├── Precision / Recall
+       │
+       └── Model Deployment
+              ↓
+           FastAPI
+              ↓
+          REST API
+
+
+
+
+ What is Deep Learning?
+
+Deep Learning is a subset of Machine Learning that uses artificial neural networks with multiple layers to automatically learn complex patterns from data.
+
+
+The word “deep” refers to having multiple layers in the neural network.
+
+
+For example:
+
+
+Input Data
+    ↓
+Input Layer
+    ↓
+Hidden Layer 1
+    ↓
+Hidden Layer 2
+    ↓
+Hidden Layer 3
+    ↓
+Output Layer
+
+Each layer learns increasingly complex representations.
+
+
+
+2. Why do we need Deep Learning?
+
+Traditional ML often requires humans to decide which features are important.
+
+
+For example, suppose you're building a system to recognize cats.
+
+
+Traditional approach:
+
+
+Image
+ ↓
+Human-designed features
+ ↓
+Edges
+ ↓
+Shapes
+ ↓
+Texture
+ ↓
+ML algorithm
+ ↓
+Cat / Not Cat
+
+Deep learning can learn these representations automatically:
