@@ -212,9 +212,14 @@ FastAPI heavily uses Pydantic for data validation and serialization.
                      Automatic API docs
 
 
+Why JSON?
+REST APIs commonly use JSON because it's:
+- lightweight
+- human-readable
+- easy to parse
+- supported by almost every programming language
 
-
-
+REST API stands for Representational State Transfer Application Programming Interface. It is an architectural approach for allowing clients and servers to communicate, usually over HTTP. REST treats data as resources, such as users, products, and orders, and uses HTTP methods like GET, POST, PUT, PATCH, and DELETE to perform operations on those resources. It is commonly stateless and uses formats such as JSON for data exchange. In my projects, I use REST APIs to separate the frontend from the backend and allow the backend to handle business logic and database operations securely.
 
 
 
@@ -322,6 +327,24 @@ Subset of AI where systems learn patterns from data.
 
 Deep Learning
 Subset of ML using multi-layer neural networks.
+
+What is a Model?
+A model is the learned mathematical representation of patterns in the training data that can be used to make predictions on new data.
+
+Think:
+Training Data
+     ↓
+Learning Algorithm
+     ↓
+Learned Parameters
+     ↓
+Model
+New Data
+    ↓
+ Model
+    ↓
+Prediction
+
 
 So:
 
@@ -1004,3 +1027,1645 @@ ML algorithm
 Cat / Not Cat
 
 Deep learning can learn these representations automatically:
+
+
+
+What is an Artificial Neural Network?
+An Artificial Neural Network (ANN) is a computational model inspired loosely by biological neural networks.
+
+It consists of interconnected neurons/nodes arranged in layers.
+
+What is a Neuron?
+A neuron receives inputs, applies weights, adds a bias, and passes the result through an activation function.
+
+What is Bias?
+Bias is an additional learnable parameter that allows a neuron to shift its activation.
+
+The equation is:
+
+z = wx+b
+
+What is an Activation Function?
+This is extremely important.
+
+An activation function determines the output of a neuron and introduces non-linearity into the network.
+
+Without nonlinear activation functions, stacking many layers of linear operations would still effectively produce a linear transformation.
+
+
+What is a CNN?
+CNN = Convolutional Neural Network.
+
+CNNs are particularly effective for image and spatial data.
+
+What is an RNN?
+RNN = Recurrent Neural Network.
+
+RNNs were designed to process sequential data.
+
+Examples:
+Text
+Speech
+Time series
+Sensor data
+
+
+
+What is LSTM?
+LSTM = Long Short-Term Memory.
+
+It's a type of recurrent neural network designed to handle long-term dependencies better than vanilla RNNs.
+
+It uses gates to control information flow.
+
+Conceptually:
+Previous information
+       ↓
+ ┌──────────────┐
+ │    LSTM      │
+ │              │
+ │ Forget gate  │
+ │ Input gate   │
+ │ Output gate  │
+ └──────────────┘
+       ↓
+New hidden state
+
+
+
+What is a Transformer?
+This is extremely important in modern AI interviews.
+
+Transformers use attention mechanisms to model relationships between elements in a sequence.
+
+They became foundational to modern NLP and many multimodal/AI systems.
+
+Examples of transformer-based architectures include:
+- BERT
+- GPT-family models
+- T5
+The key idea to remember:
+Transformers use attention to determine which parts of the input are important in relation to one another.
+
+
+
+
+What is Dropout?
+During training, dropout randomly deactivates some neurons.
+
+Conceptually:
+Before:
+
+○ ─ ○ ─ ○ ─ ○
+│   │   │   │
+○ ─ ○ ─ ○ ─ ○
+
+
+During dropout:
+
+○ ─ X ─ ○ ─ X
+│       │
+○ ─ ○ ─ X ─ ○
+
+This encourages the network not to rely too heavily on particular neurons and can help reduce overfitting
+
+
+
+What is Transfer Learning?
+Very important practical concept.
+
+Instead of training a huge neural network from scratch:
+Random weights
+ ↓
+Train everything
+ ↓
+Requires huge dataset + compute
+
+you start with a model that has already learned useful representations from a large dataset:
+Pretrained Model
+       ↓
+Fine-tune
+       ↓
+Your specific task
+
+
+
+
+                    AI
+                     │
+                     ↓
+              Machine Learning
+                     │
+                     ↓
+               Deep Learning
+                     │
+                     ↓
+             Neural Network
+                     │
+        ┌────────────┼────────────┐
+        ↓            ↓            ↓
+       CNN          RNN      Transformer
+        │            │            │
+      Images      Sequences    Attention
+        │            │            │
+        └────────────┴────────────┘
+                     ↓
+                  Training
+                     │
+               Forward Pass
+                     ↓
+                  Prediction
+                     ↓
+              Loss Function
+                     ↓
+               Backpropagation
+                     ↓
+              Gradient Descent
+                     ↓
+             Updated Weights
+                     ↓
+                  Repeat
+
+
+
+
+
+
+What is Generative AI?
+Generative AI is a branch of AI that learns patterns from existing data and uses those learned patterns to generate new content.
+
+It can generate:
+Text
+Images
+Audio
+Video
+Code
+Music
+3D content
+Why do we need Generative AI?
+Traditional AI is often designed to predict, classify, or detect.
+
+For example:
+Image → Cat
+Email → Spam
+Transaction → Fraud
+
+Generative AI can create something new:
+Prompt
+ ↓
+Generate email
+Generate code
+Generate image
+Generate summary
+Generate answer
+
+
+
+
+How does Generative AI actually work?
+At a high level:
+Large Amount of Data
+        ↓
+Training
+        ↓
+Model learns patterns
+        ↓
+Prompt / Input
+        ↓
+Model generates output
+
+The model doesn't simply store a database of answers and retrieve one.
+
+It learns statistical patterns and relationships in the training data and uses its learned parameters to generate outputs.
+5. Large Language Models — LLMs
+A major class of Generative AI is the Large Language Model (LLM).
+
+Examples include models from the GPT, Gemini, Claude, and Llama families.
+
+An LLM is designed to work with language and generate or understand text.
+
+Conceptually:
+Text
+ ↓
+Tokens
+ ↓
+Neural Network
+ ↓
+Probability distribution over next token
+ ↓
+Next token
+ ↓
+Repeat
+ ↓
+Generated text
+
+6. The most important idea: next-token prediction
+This is an interview favorite.
+
+Suppose the input is:
+"Machine learning is"
+
+The model estimates probabilities for possible next tokens:
+a        → 0.30
+important → 0.20
+field      → 0.15
+...
+
+It selects a token according to the model's decoding strategy.
+
+Then:
+"Machine learning is a"
+
+and predicts the next token again.
+
+This happens repeatedly.
+
+So an LLM can be described fundamentally as a system that learns to model sequences of tokens and generate them step by step.
+Important correction
+Don't say:
+"The model thinks of the whole answer and then writes it."
+
+A more accurate explanation is that generation proceeds autoregressively in many common LLMs, producing tokens sequentially conditioned on preceding context.
+7. What is a Token?
+A token is a unit of text processed by a language model.
+
+It isn't always exactly one word.
+
+For example:
+"Hello world"
+
+might be represented as multiple tokens depending on the tokenizer.
+
+A long word can also be split:
+unbelievable
+
+into multiple subword pieces.
+
+Conceptually:
+Sentence
+   ↓
+Tokenizer
+   ↓
+Tokens
+   ↓
+Token IDs
+
+Then the model works with those numerical IDs.
+8. What is an Embedding?
+An embedding is a numerical vector representation of data such as text.
+
+For example:
+"apple"
+   ↓
+[0.21, -0.73, 0.14, ...]
+
+The actual vectors contain many dimensions.
+
+The important idea is that embeddings represent semantic and contextual relationships in a numerical space.
+
+For example, concepts with related meanings can have vectors that are closer according to a chosen similarity measure.
+
+Embeddings are heavily used in:
+- Semantic search
+- Recommendation
+- Retrieval-Augmented Generation
+- Clustering
+- Document search
+9. What is a Transformer?
+This is extremely important for GenAI interviews.
+
+Modern LLMs commonly use the Transformer architecture.
+
+The Transformer was introduced in the 2017 paper “Attention Is All You Need.”
+
+Its central mechanism is attention.
+10. What is Attention?
+Attention allows the model to determine which parts of the input are important when processing a particular token.
+
+Example:
+"The animal didn't cross the road because it was tired."
+
+What does "it" refer to?
+
+The model needs to relate different parts of the sentence.
+
+Attention helps model these relationships.
+
+Conceptually:
+Input tokens
+     ↓
+Attention
+     ↓
+Learn relationships between tokens
+     ↓
+Contextual representation
+
+11. Self-Attention
+In self-attention, tokens in a sequence attend to other tokens in that same sequence.
+
+A simplified conceptual representation:
+The     → related to → animal
+it      → related to → animal
+tired   → related to → was / it
+
+The model learns these relationships through attention scores.
+12. Encoder vs Decoder
+Transformers can be organized differently depending on the task.
+Encoder-focused models
+Example:
+BERT
+
+Good for understanding/representation tasks.
+Decoder-focused models
+Many autoregressive LLMs use decoder-style Transformer architectures.
+
+They are well suited for:
+Text generation
+Chat
+Code generation
+
+Encoder-decoder
+Used for tasks such as:
+Translation
+Summarization
+Sequence-to-sequence tasks
+
+A good interview answer is:
+Transformer architectures can be encoder-only, decoder-only, or encoder-decoder, depending on the application.
+
+13. How is an LLM trained?
+There are two broad stages worth understanding.
+Pretraining
+The model is trained on a very large corpus of data.
+
+It learns general language patterns.
+
+Conceptually:
+Huge Dataset
+     ↓
+Tokenization
+     ↓
+Neural Network
+     ↓
+Prediction
+     ↓
+Loss
+     ↓
+Backpropagation
+     ↓
+Parameter updates
+
+Repeated many times.
+14. What is Fine-Tuning?
+After pretraining, a model can be further trained on a more specialized dataset.
+
+For example:
+General LLM
+    ↓
+Fine-tune on legal documents
+    ↓
+Legal-domain model
+
+or:
+General LLM
+    ↓
+Fine-tune on company support conversations
+    ↓
+Customer-support model
+
+The purpose is to adapt the model to a particular task, style, or domain.
+15. Fine-Tuning vs RAG 🔥
+This is one of the most important GenAI interview questions.
+Fine-tuning
+You change the model's learned parameters by training further on domain/task-specific examples.
+RAG
+You retrieve external information at inference time and provide it to the model as context.
+User Question
+      ↓
+Retriever
+      ↓
+Relevant Documents
+      ↓
+Prompt + Documents
+      ↓
+LLM
+      ↓
+Answer
+
+Example
+Suppose your company has:
+1000 internal documents
+
+You want a chatbot that answers questions about those documents.
+
+RAG is a common architecture:
+Documents
+   ↓
+Chunking
+   ↓
+Embeddings
+   ↓
+Vector Database
+   ↓
+User Query
+   ↓
+Similarity Search
+   ↓
+Relevant Chunks
+   ↓
+LLM
+   ↓
+Answer
+
+The model doesn't need to be retrained every time a document changes.
+16. Why RAG is useful?
+Suppose your company policy changes today.
+
+With a retrieval system:
+Updated document
+      ↓
+Index/update knowledge base
+      ↓
+Next question
+      ↓
+Retrieve current information
+
+You can therefore provide the model with current external context.
+
+RAG can help with:
+- Private company information
+- Frequently changing documents
+- Knowledge bases
+- Search + generation
+- Grounding responses in retrieved sources
+17. Hallucination
+Very important.
+
+An AI hallucination is when a model generates information that is unsupported, incorrect, or fabricated while presenting it as an answer.
+
+Example:
+
+User:
+"Who invented XYZ technology?"
+
+Model:
+Gives a confident but fabricated answer.
+
+The model is optimizing for generating plausible sequences, not inherently guaranteeing factual truth.
+How can we reduce hallucinations?
+Techniques include:
+- RAG
+- Better prompting
+- Grounding in trusted sources
+- Tool use
+- Retrieval
+- Evaluation
+- Fine-tuning for specific behavior
+- Output verification
+No technique guarantees zero hallucinations.
+18. What is Prompt Engineering?
+Prompt engineering is the practice of designing inputs/instructions to guide a model toward a desired output.
+
+Weak prompt:
+Explain databases.
+
+More structured prompt:
+Explain database indexing to a beginner.
+Give:
+1. definition
+2. why it is needed
+3. example
+4. advantages
+5. disadvantages
+6. interview questions
+
+The second prompt specifies the desired task and structure.
+19. What is Context Window?
+An LLM can only process a finite amount of context in a single interaction, based on the model and its configuration.
+
+That available amount is referred to as its context window.
+
+Conceptually:
+System instructions
++
+Conversation
++
+Retrieved documents
++
+User prompt
++
+Other context
+        ↓
+   Context Window
+        ↓
+       Model
+
+This matters when building:
+- RAG systems
+- Long-document processing
+- Chat applications
+- Agent systems
+
+Generative AI Architecture in a real project
+Suppose you're building an AI chatbot for your application:
+                User
+                  ↓
+             React / App
+                  ↓
+               FastAPI
+                  ↓
+             RAG Pipeline
+            ↙           ↘
+       Retriever         LLM
+          ↓                ↑
+   Vector Database ────────┘
+          ↓
+     Relevant Context
+                  ↓
+               Response
+                  ↓
+                User
+
+This connects everything we've already discussed:
+
+REST API + FastAPI + ML + Deep Learning + GenAI + Embeddings + RAG + Vector DB.
+
+
+
+What is a Vector Database?
+A vector database stores and searches vector embeddings efficiently.
+
+For example:
+Document
+   ↓
+Embedding Model
+   ↓
+[0.12, -0.22, 0.81, ...]
+   ↓
+Vector Database
+
+When the user asks a question:
+Question
+  ↓
+Embedding
+  ↓
+Similarity Search
+  ↓
+Nearest relevant documents
+
+Common systems include:
+- Pinecone
+- Weaviate
+- Milvus
+- Chroma
+- pgvector with PostgreSQL
+The specific choice depends on the architecture and requirements.
+23. What is Semantic Search?
+Traditional keyword search may focus heavily on exact terms.
+
+Semantic search tries to retrieve information based on meaning using representations such as embeddings.
+
+Example:
+
+Document:
+"A customer may cancel their subscription at any time."
+
+Query:
+"How can I terminate my plan?"
+
+A semantic system can recognize that these are related even though the exact words differ.
+24. Generative AI vs Chatbot
+Don't confuse them.
+
+A chatbot is an application/interface.
+
+Generative AI is a modeling capability/technology.
+
+You can build a chatbot using:
+Chatbot UI
+   ↓
+Backend
+   ↓
+LLM
+
+But not every chatbot has to use a generative model.
+25. Generative AI vs Search Engine
+Search engine
+Primarily retrieves documents/pages.
+Query
+ ↓
+Search
+ ↓
+Results
+
+Generative AI
+Generates an answer/content.
+Prompt
+ ↓
+Model
+ ↓
+Generated response
+
+RAG
+Combines both ideas:
+Search/retrieve
+      +
+Generate
+
+That's why RAG is so important.
+26. Generative AI vs Traditional ML
+Traditional ML	Generative AI
+Often predicts/classifies	Generates new content
+Example: churn prediction	Example: generate customer response
+Often structured data	Frequently text/image/audio/code
+Random Forest, SVM, XGBoost	LLMs, diffusion models, generative transformers
+Output often fixed classes/numbers	Output can be open-ended
+
+
+27. Important Generative AI models
+Know the broad categories.
+Language generation
+Usually Transformer-based models.
+Image generation
+Models such as diffusion-based architectures are widely used.
+
+
+
+
+How do you deploy a Generative AI application?
+A common architecture:
+Frontend
+   ↓
+REST API
+   ↓
+FastAPI
+   ↓
+Application Logic
+   ↓
+ ┌──────────────┬──────────────┐
+ ↓              ↓              ↓
+LLM          Vector DB      Database
+ ↓              ↑
+ ↓         Embeddings
+ └──────────────┘
+        ↓
+     Response
+
+
+
+
+
+
+"Why can GenAI hallucinate?"
+Good answer:
+Generative language models are trained to model and generate plausible token sequences. Because generating a plausible sequence is not the same as verifying factual correctness, the model can sometimes produce unsupported or incorrect information. Retrieval, tools, grounding, and verification can reduce this risk.
+
+33. Interview question: "What is RAG?"
+Use this:
+RAG stands for Retrieval-Augmented Generation. It combines information retrieval with a generative language model. When a user asks a question, the system first retrieves relevant information from an external knowledge source, such as a vector database, and then provides that information as context to the language model to generate the answer. RAG is useful when we need the model to work with private, domain-specific, or frequently changing information without necessarily retraining the entire model.
+
+
+
+34. Interview question: "What is Generative AI?"
+Generative AI is a class of artificial intelligence systems that can generate new content such as text, images, audio, video, or code by learning patterns from existing data. Large language models are an example of generative AI for text. During generation, an LLM commonly predicts the next token based on the preceding context and repeats this process to produce a sequence. Modern generative AI systems are often built using deep-learning architectures such as Transformers.
+
+
+The GenAI interview map you should remember
+                    AI
+                    │
+                    ↓
+             Machine Learning
+                    │
+                    ↓
+              Deep Learning
+                    │
+        ┌───────────┴───────────┐
+        ↓                       ↓
+ Traditional ML            Generative AI
+                                │
+                         ┌──────┴──────┐
+                         ↓             ↓
+                        LLMs        Image Models
+                         │
+                     Transformer
+                         │
+                      Attention
+                         │
+                       Tokens
+                         │
+                     Embeddings
+                         │
+             ┌───────────┴───────────┐
+             ↓                       ↓
+          Fine-tuning               RAG
+                                     │
+                              Vector Database
+                                     │
+                                  Retrieval
+                                     │
+                                    LLM
+                                     ↓
+                                  Answer
+
+
+TensorFlow
+What is TensorFlow?
+TensorFlow is a machine learning/deep learning framework developed by Google.
+
+It helps us:
+- Build neural networks
+- Train models
+- Perform mathematical operations on tensors
+- Deploy ML models
+Think of it as a toolbox for building AI models.
+Simple analogy
+If you're building a house:
+Bricks + cement + tools → House
+
+For AI:
+TensorFlow + data + model → Trained AI model
+
+Why is it used?
+Instead of manually implementing all the mathematics behind neural networks, TensorFlow provides tools for:
+Data
+ ↓
+Neural Network
+ ↓
+Training
+ ↓
+Prediction
+
+
+
+
+PyTorch
+What is PyTorch?
+PyTorch is another deep-learning framework, originally developed by Facebook/Meta.
+
+It is used to:
+- Build neural networks
+- Train deep-learning models
+- Perform tensor operations
+- Experiment with AI models
+So:
+TensorFlow ─┐
+            ├── Deep Learning
+PyTorch  ───┘
+
+Simple analogy
+Think of:
+TensorFlow = one AI toolbox
+PyTorch    = another AI toolbox
+
+Both can build neural networks.
+3. Why is PyTorch popular?
+PyTorch is known for being very convenient for experimentation and research, with an imperative/eager programming style that feels natural to Python developers.
+
+
+
+OpenCV
+Now this one is different.
+
+OpenCV = Open Source Computer Vision Library.
+
+It is mainly used for processing and analyzing images and videos.
+
+Think:
+Camera
+ ↓
+Image/Video
+ ↓
+OpenCV
+ ↓
+Processing / Detection
+
+6. Why do we use OpenCV?
+Suppose you have a photo.
+
+You may want to:
+- Resize it
+- Crop it
+- Change colors
+- Remove noise
+- Detect edges
+- Detect faces
+- Process video
+- Read camera input
+OpenCV provides functions for these tasks.
+
+
+
+Easy way to remember all 3
+TensorFlow
+→ Build/train AI models
+
+PyTorch
+→ Build/train AI models
+
+OpenCV
+→ Process images/video
+
+
+                 COMPUTER VISION PROJECT
+
+Camera / Image
+       ↓
+    OpenCV
+       ↓
+Preprocessing
+       ↓
+┌──────┴──────┐
+↓             ↓
+PyTorch     TensorFlow
+↓             ↓
+Deep Learning Model
+       ↓
+   Prediction
+
+
+TensorFlow and PyTorch are deep-learning frameworks used to build and train neural-network models. OpenCV is a computer-vision library mainly used for processing images and videos, such as reading camera frames, resizing images, filtering, and detecting visual features. In a real application, OpenCV can handle image preprocessing while PyTorch or TensorFlow runs the deep-learning model and produces the prediction.
+
+
+
+Computer Vision — Simple + Interview Deep Dive
+The easiest way to understand Computer Vision is:
+Computer Vision is the field of AI that enables computers to understand and interpret images and videos.
+
+Think of it as:
+
+Human eyes → see → brain understands
+
+For a computer:
+
+Camera/image → Computer Vision → computer interprets
+1. What is Computer Vision?
+Computer Vision is a field of Artificial Intelligence and Machine Learning that deals with extracting meaningful information from images, videos, and other visual data.
+
+For example, give a computer this:
+📷 Image of a dog
+
+Computer Vision can determine:
+"There is a dog in this image."
+
+It can go much further:
+Dog → breed
+Car → make/model
+Face → identity
+Road → lane boundaries
+Video → human activity
+
+2. Why do we need Computer Vision?
+Computers don't naturally understand an image the way humans do.
+
+A computer essentially receives numerical data representing pixels.
+
+What are the major Computer Vision tasks?
+You should know these six.
+1. Image Classification
+Question:
+What is in this image?
+
+Example:
+Image
+ ↓
+CNN
+ ↓
+Cat
+
+The model assigns a class to the image.
+2. Object Detection
+Question:
+What objects are present and where are they?
+
+Example:
+Image
+ ↓
+Object Detection
+ ↓
+Car → bounding box
+Person → bounding box
+Dog → bounding box
+
+So detection gives both:
+WHAT + WHERE
+
+3. Image Segmentation
+Question:
+Which exact pixels belong to each object?
+
+Example:
+Person
+ ↓
+Every pixel belonging to the person is identified
+
+This is more detailed than object detection.
+
+There are different types, including:
+- Semantic segmentation
+- Instance segmentation
+4. Face Detection
+Question:
+Where are the faces?
+
+Example:
+Image
+ ↓
+Face detector
+ ↓
+[Face 1] [Face 2]
+
+Notice:
+
+Face detection ≠ face recognition.
+5. Face Recognition
+Question:
+Whose face is it?
+
+For example:
+Face
+ ↓
+Face embedding / features
+ ↓
+Compare with known identities
+ ↓
+Akshay
+
+6. OCR
+OCR = Optical Character Recognition
+
+It extracts text from images.
+Photo of document
+       ↓
+       OCR
+       ↓
+"Invoice Number: 12345"
+
+Applications include:
+- Scanning documents
+- Reading number plates
+- Digitizing books
+- Invoice processing
+8. What is CNN?
+This is one of the most important Computer Vision concepts.
+
+CNN = Convolutional Neural Network.
+
+CNNs are deep-learning architectures that are particularly effective for image and spatial data.
+
+Instead of treating every pixel independently, convolutional layers learn local patterns.
+
+Conceptually:
+Image
+ ↓
+Convolution
+ ↓
+Edges
+ ↓
+Shapes
+ ↓
+Textures
+ ↓
+Objects
+ ↓
+Prediction
+
+9. What is Convolution?
+Don't let the word scare you.
+
+Imagine a small window moving over an image:
+[ ][ ][ ]
+[ ][ ][ ]
+[ ][ ][ ]
+
+This small matrix is called a filter/kernel.
+
+It scans the image and calculates values that respond to certain patterns.
+
+For example, one filter may learn to detect:
+Vertical edges
+
+Another:
+Horizontal edges
+
+During training, CNN filters learn useful visual patterns automatically.
+10. Why CNNs are useful?
+Suppose you flatten a huge image and give every pixel directly to a fully connected network.
+
+There could be a massive number of parameters.
+
+CNNs use:
+Local connectivity
+A neuron looks at a local region.
+Parameter sharing
+The same filter can be applied across different parts of the image.
+
+This makes CNNs much more practical for visual pattern detection.
+11. Pooling
+CNNs may also use pooling to reduce spatial dimensions.
+
+For example:
+Large feature map
+       ↓
+    Max Pooling
+       ↓
+Smaller feature map
+
+Max pooling takes the largest value in a local region.
+
+Benefits can include:
+- Reducing computation
+- Reducing spatial dimensions
+- Retaining strong detected features
+Modern architectures sometimes use alternatives such as strided convolutions or global pooling instead.
+12. Object Detection vs Classification
+Very common question.
+Classification
+Image
+ ↓
+"Dog"
+
+It tells you what is present.
+Object Detection
+Image
+ ↓
+Dog → box
+Cat → box
+Car → box
+
+It tells you:
+
+what + where
+13. Detection vs Segmentation
+Detection
+Object
+ ↓
+Bounding box
+
+Segmentation
+Object
+ ↓
+Pixel-level mask
+
+Imagine a person standing in a photo.
+
+Detection:
+┌──────────────┐
+│    PERSON    │
+│              │
+└──────────────┘
+
+Segmentation identifies the exact pixels belonging to the person.
+14. Traditional Computer Vision vs Deep Learning
+Traditional Computer Vision
+Humans often design features manually:
+Image
+ ↓
+Edges
+ ↓
+Contours
+ ↓
+Handcrafted features
+ ↓
+Classifier
+
+Examples include techniques based on:
+- Edges
+- Corners
+- HOG
+- SIFT
+Deep Learning Computer Vision
+Image
+ ↓
+Neural Network
+ ↓
+Automatically learned representations
+ ↓
+Prediction
+
+This is a major reason deep learning transformed computer vision.
+15. Where does OpenCV fit?
+This connects directly to what you asked before.
+
+OpenCV is a Computer Vision library.
+
+It can help with:
+Image reading
+Video capture
+Resizing
+Cropping
+Filtering
+Color conversion
+Edge detection
+Image transformations
+
+For example:
+Camera
+ ↓
+OpenCV
+ ↓
+Capture frame
+ ↓
+Resize
+ ↓
+PyTorch model
+ ↓
+Prediction
+
+So:
+OpenCV is a tool used for computer vision; Computer Vision itself is the broader field.
+
+16. Computer Vision + PyTorch
+Suppose you're doing image classification.
+image.jpg
+    ↓
+OpenCV
+    ↓
+Resize / preprocess
+    ↓
+PyTorch
+    ↓
+CNN
+    ↓
+Prediction
+
+PyTorch is used to build/train/run the neural network.
+
+OpenCV can be used to read and process the visual data.
+17. Computer Vision + TensorFlow
+Same idea:
+Image
+ ↓
+OpenCV
+ ↓
+Preprocessing
+ ↓
+TensorFlow/Keras model
+ ↓
+Prediction
+
+TensorFlow and PyTorch are frameworks.
+
+OpenCV is a computer-vision library.
+18. Example: Face Detection System
+Suppose you build a security application.
+Camera
+ ↓
+OpenCV captures frame
+ ↓
+Face Detection
+ ↓
+Find face
+ ↓
+Face Recognition model
+ ↓
+Compare identity
+ ↓
+Known / Unknown
+
+Important:
+
+Detection answers:
+"Is there a face, and where?"
+
+Recognition answers:
+"Whose face is it?"
+
+19. Example: Your RakshaNet / safety application
+A computer-vision component could potentially be used for visual-event analysis.
+
+For example:
+Camera
+ ↓
+OpenCV
+ ↓
+Frame preprocessing
+ ↓
+Computer Vision model
+ ↓
+Detect relevant visual event
+ ↓
+Backend / FastAPI
+ ↓
+Safety application
+
+The important interview point is to be honest about what your actual project implemented versus what could be added.
+
+Don't claim you implemented a CNN/object detector if your project was only a prototype.
+20. Interview Answer: "What is Computer Vision?"
+Computer Vision is a field of artificial intelligence that enables computers to process and understand visual information such as images and videos. A computer receives images as numerical pixel data, and computer-vision techniques can extract useful information such as objects, faces, text, or other visual patterns. Modern computer vision commonly uses deep-learning models such as CNNs and vision transformers, while libraries like OpenCV are often used for image and video processing and preprocessing.
+
+
+
+21. Interview Answer: "What is the difference between OpenCV and Computer Vision?"
+Computer Vision is the broader field of making computers understand images and videos, whereas OpenCV is a software library that provides tools for implementing many computer-vision and image-processing tasks. For example, OpenCV can capture camera frames, resize images, apply filters, and perform certain detection operations, while a deep-learning framework such as PyTorch or TensorFlow can be used to train and run a neural-network model on that visual data.
+
+                   COMPUTER VISION
+                          │
+                 Image / Video Data
+                          ↓
+                    Preprocessing
+                          ↓
+             ┌────────────┴────────────┐
+             ↓                         ↓
+       Traditional CV             Deep Learning
+             │                         │
+      Edges / Features          CNN / ViT etc.
+             │                         │
+             └────────────┬────────────┘
+                          ↓
+                  Vision Task
+          ┌─────────┬─────────┬─────────┐
+          ↓         ↓         ↓         ↓
+    Classification Detection Segmentation OCR
+          ↓         ↓         ↓         ↓
+                         Result
+
+
+
+
+
+
+NumPy → work with numbers
+Pandas → work with tables/data
+Scikit-learn → build Machine Learning models
+
+1. NumPy
+What is NumPy?
+NumPy = Numerical Python.
+
+It is a Python library used for fast numerical calculations and working with arrays/matrices.
+
+Instead of using normal Python lists for large numerical operations, NumPy provides efficient arrays and mathematical operations.
+Simple example
+import numpy as npnumbers = np.array([10, 20, 30, 40])print(numbers.mean())
+
+
+Output:
+25.0
+
+Why use NumPy?
+Imagine you have:
+1 million numbers
+
+and want to perform calculations on them.
+
+NumPy is designed to handle numerical operations efficiently.
+Common things you do with NumPy
+np.array()np.mean()np.max()np.min()np.sum()np.reshape()
+
+
+In ML
+Machine-learning data eventually becomes numerical data.
+
+For example:
+Age     Income
+21      30000
+25      45000
+30      60000
+
+can be represented as an array/matrix.
+
+So think:
+NumPy = mathematical foundation of Python data science.
+
+2. Pandas
+What is Pandas?
+Pandas is a Python library used for data manipulation and analysis.
+
+It is especially useful for working with tabular data.
+
+Think:
+Pandas = Excel for Python
+
+Suppose you have:
+Name    Age    Salary
+Akshay  21     50000
+Rahul   22     45000
+
+Pandas lets you easily:
+- Read CSV files
+- Filter rows
+- Select columns
+- Remove missing values
+- Sort data
+- Group data
+- Clean data
+Simple Pandas example
+import pandas as pddata = pd.read_csv("employees.csv")print(data.head())
+
+
+read_csv() reads a CSV file into a DataFrame.
+What is a DataFrame?
+A DataFrame is basically a table of rows and columns.
+        Name   Age   Salary
+0       Akshay  21   50000
+1       Rahul   22   45000
+2       Anu     23   55000
+
+You can do:
+data["Salary"]
+
+
+to get the Salary column.
+
+Or:
+data[data["Salary"] > 50000]
+
+
+to get people earning more than 50,000.
+3. Why is Pandas important in Machine Learning?
+Before training a model, your data usually needs cleaning.
+
+For example:
+Raw Data
+   ↓
+Missing values
+   ↓
+Duplicates
+   ↓
+Wrong formats
+   ↓
+Outliers
+   ↓
+Clean Data
+   ↓
+ML Model
+
+Pandas is commonly used heavily in that data preprocessing stage.
+
+So:
+Pandas = prepare and analyze the data.
+
+4. Scikit-learn
+First, the correct name is:
+
+Scikit-learn
+Also commonly imported as:
+import sklearn
+
+
+What is Scikit-learn?
+Scikit-learn is a Python machine-learning library that provides ready-to-use algorithms and tools for building ML models.
+
+It provides algorithms such as:
+Linear Regression
+Logistic Regression
+Decision Trees
+Random Forest
+KNN
+SVM
+K-Means
+
+It also provides:
+- Train/test splitting
+- Feature preprocessing
+- Evaluation metrics
+- Model selection
+- Pipelines
+5. Simple Scikit-learn example
+Suppose you want to predict whether a student passes based on study hours.
+from sklearn.linear_model import LinearRegressionmodel = LinearRegression()model.fit(X_train, y_train)prediction = model.predict(X_test)
+
+
+Here:
+model.fit()
+→ train the model
+
+model.predict()
+→ make predictions
+
+6. The three together 🔥
+This is the most important part.
+
+Imagine you have a CSV containing customer information.
+customers.csv
+      ↓
+    Pandas
+      ↓
+Clean / analyze data
+      ↓
+    NumPy
+      ↓
+Numerical arrays
+      ↓
+Scikit-learn
+      ↓
+Train ML model
+      ↓
+Prediction
+
+So:
+NumPy       → numbers/arrays
+Pandas      → tables/data
+Scikit-learn → machine learning
+
+
+
+
+
+What are NumPy, Pandas and Scikit-learn?"
+
+Say:
+NumPy is a Python library mainly used for numerical computation and working with arrays and matrices. Pandas is used for handling and analyzing structured data, mainly through DataFrames and Series. Scikit-learn is a machine-learning library that provides algorithms such as regression, classification, clustering, along with tools for preprocessing, model training, evaluation, and model selection. In a typical ML project, I would use Pandas to load and clean the data, NumPy for numerical operations, and Scikit-learn to train and evaluate the machine-learning model.
+
+
+
+🔥 Remember this picture
+              DATA SCIENCE / ML
+
+               Raw Dataset
+                    ↓
+                 Pandas
+                    ↓
+           Clean / Analyze Data
+                    ↓
+                 NumPy
+                    ↓
+            Numerical Operations
+                    ↓
+             Scikit-learn
+                    ↓
+             Train ML Model
+                    ↓
+               Prediction
+
+One-line memory trick
+NumPy = Numbers
+Pandas = Tables
+Scikit-learn = Machine Learning
+
+
+Tool Calling — Very Simple Explanation
+Tool calling means an AI model can ask an external tool/function to perform an action or get information instead of doing everything itself.
+Simple example
+You ask an AI:
+"What's the weather in Mangaluru?"
+
+The AI doesn't have to guess.
+
+It can:
+User
+ ↓
+AI model
+ ↓
+" I need weather information "
+ ↓
+Weather tool
+ ↓
+Current weather data
+ ↓
+AI
+ ↓
+Answer to user
+
+So:
+LLM = decides what needs to be done
+Tool = actually does the task
+
+
+
+"What is tool calling in Generative AI?"
+
+Say:
+Tool calling is a capability that allows an AI model to request the execution of external functions or services when it needs information or wants to perform an action. For example, if a user asks for current weather, the model can call a weather API instead of guessing. The application executes the tool, returns the result to the model, and the model uses that result to generate the final response.
+
+
+
+🔥 Remember this
+LLM decides → Tool executes → Result comes back → LLM responds.
+
+
+
+AI Agents — In Simple Terms
+An AI agent is an AI system that can understand a goal, decide what steps to take, use tools, and complete the task with limited human intervention.
+
+The easiest way to remember:
+LLM = thinks/generates
+Tool = does something
+Agent = decides what to do and uses tools to achieve a goal
+
+1. Simple example
+You tell an AI agent:
+"Find my latest order and tell me when it will arrive."
+
+A normal chatbot might just answer based on what it knows.
+
+An AI agent can:
+User
+ ↓
+AI Agent
+ ↓
+Understand goal
+ ↓
+Check orders → Tool
+ ↓
+Get latest order
+ ↓
+Check delivery status → Tool
+ ↓
+Understand result
+ ↓
+Give answer
+
+The agent is essentially taking steps to complete a task.
+2. Real-world analogy
+Imagine you have a personal assistant.
+
+You say:
+"Book me a flight to Delhi."
+
+The assistant may:
+1. Search flights
+2. Compare options
+3. Check your preferences
+4. Select one
+5. Book it
+6. Confirm booking
+
+An AI agent works similarly:
+Goal
+ ↓
+Plan
+ ↓
+Use tools
+ ↓
+Observe results
+ ↓
+Take next action
+ ↓
+Complete goal
+
+3. AI chatbot vs AI agent
+This distinction is very important in interviews.
+Normal chatbot
+Question
+   ↓
+LLM
+   ↓
+Answer
+
+AI agent
+Goal
+ ↓
+LLM
+ ↓
+Decide action
+ ↓
+Tool
+ ↓
+Result
+ ↓
+LLM
+ ↓
+Next action
+ ↓
+Final result
+
+So an agent is generally more action-oriented  than a simple question-answering chatbot.
+
+
+"Is an AI agent just an LLM?"
+No.
+
+An LLM generates and processes language.
+
+An agent is a larger system built around an LLM that can use tools, maintain state, make decisions, and perform actions.
+
+Good answer:
+An AI agent is a system that uses an AI model, often an LLM, to understand a goal, decide what steps are needed, use tools or external systems, observe the results, and continue until the task is completed. An LLM by itself mainly generates or processes information, while an agent adds capabilities such as tool use, decision-making, state, and action execution.
+
+
+
+15. "What is an AI agent?" — 20-second answer
+An AI agent is an AI system that can understand a goal, decide what actions to take, use tools such as APIs or databases, and use the results to complete the task. For example, instead of only answering a user's question about an order, an agent could check the order database, retrieve its delivery status, check the relevant policy, and then take an appropriate action.
+
+
+
+🔥 Remember this diagram
+             USER
+               ↓
+             GOAL
+               ↓
+          AI AGENT
+               ↓
+        ┌──────┴──────┐
+        ↓             ↓
+       LLM         MEMORY/STATE
+        ↓
+   Decide next step
+        ↓
+       TOOL
+        ↓
+     Result
+        ↓
+      LLM
+        ↓
+  Another action?
+      ↙      ↘
+    YES       NO
+     ↓         ↓
+   TOOL     ANSWER
+   AGAIN
+
+
+
