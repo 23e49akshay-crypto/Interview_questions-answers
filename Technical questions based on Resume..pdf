@@ -1,0 +1,2935 @@
+Understood. No daily schedule, no Day 1, Day 2, or waiting until tomorrow. We will prepare the entire resume-based interview syllabus in one intensive study session today.
+
+I'll organize everything using your five-part method:
+
+# WHAT → WHY → HOW → WHERE → IMPLEMENTATION
+
+WHAT: What is it? Full form, definition and concepts.
+
+WHY: Why was it developed? What problem does it solve? Why is it important?
+
+HOW: How does it work internally? Architecture, workflow and components.
+
+WHERE: Real-world applications, use cases and where it fits in your projects.
+
+IMPLEMENTATION: Code, practical example, common commands and interview explanation.
+
+I've referred to your uploaded resume and preparation roadmap. Your technical profile covers software development, backend, AI/ML, Generative AI, cloud and four major projects.&#x20;
+
+AkshayGabrieal_R_Resume.docx
+
+
+
+# Complete technical interview preparation — master guide
+
+Part 1: Programming and software engineering foundations
+
+# 1. Python and programming fundamentals
+
+High priority
+
+## WHAT
+
+Python is a high-level, general-purpose programming language known for readable syntax and a large ecosystem of libraries.
+
+Python is used in:
+
+- Software development.
+- Automation.
+- Artificial Intelligence.
+- Machine Learning.
+- Data Science.
+- Backend development.
+
+### Important Python terminology
+
+| Concept    | Meaning                              |
+| ---------- | ------------------------------------ |
+| Variable   | Name referring to an object/value    |
+| Data type  | Defines the kind of data             |
+| Integer    | Whole number                         |
+| Float      | Decimal number                       |
+| String     | Text                                 |
+| Boolean    | True or False                        |
+| List       | Ordered, mutable collection          |
+| Tuple      | Ordered, immutable collection        |
+| Set        | Collection of unique elements        |
+| Dictionary | Key-value collection                 |
+| Function   | Reusable block of code               |
+| Module     | Python file containing reusable code |
+| Package    | Organized collection of modules      |
+
+## WHY
+
+Python makes development easier because of its readable syntax, extensive libraries and large developer community.
+
+For example, instead of implementing machine-learning algorithms from scratch, you can use Scikit-learn.
+
+## HOW
+
+Python code execution broadly involves:
+
+```
+Python source code
+       ↓
+Python interpreter
+       ↓
+Bytecode (in common CPython execution)
+       ↓
+Python virtual machine
+       ↓
+Program output
+```
+
+## WHERE
+
+In your resume:
+
+- Python is a programming language used across your AI/ML work.
+- CarbonMind AI uses Python.
+- Python is relevant to your ML and backend preparation.&#x20;
+
+  AkshayGabrieal_R_Resume.docx
+
+
+
+## IMPLEMENTATION
+
+```
+# Variables and data typesname = "Akshay"age = 21cgpa = 8.0is_student = True# Conditional statementsif cgpa >= 7:    print("Eligible")# Loopfor i in range(5):    print(i)# Functiondef add(a, b):    return a + bprint(add(10, 20))# Listnumbers = [10, 20, 30]# Dictionarystudent = {    "name": "Akshay",    "age": 21}
+```
+
+### Important advanced Python concepts
+
+| Concept             | What it means                            | Why it matters          |
+| ------------------- | ---------------------------------------- | ----------------------- |
+| Lambda              | Anonymous function                       | Short functions         |
+| List comprehension  | Compact list creation                    | Cleaner code            |
+| Exception handling  | Managing runtime errors                  | Reliability             |
+| Iterator            | Object that provides values sequentially | Iteration               |
+| Generator           | Produces values lazily using `yield`     | Memory efficiency       |
+| Decorator           | Wraps/modifies function behavior         | Reusable functionality  |
+| Virtual environment | Isolated Python dependencies             | Avoid package conflicts |
+| Recursion           | Function calling itself                  | Trees, backtracking     |
+
+Interview answer: What is Python?
+
+"Python is a high-level, general-purpose programming language known for its simple syntax and extensive libraries. It is widely used in backend development, automation, data science, machine learning and artificial intelligence."
+
+# 2. OOP — Object-Oriented Programming
+
+## WHAT
+
+OOP stands for Object-Oriented Programming.
+
+It is a programming paradigm that organizes software around objects containing data and behavior.
+
+Four pillars:
+
+1. Encapsulation
+2. Inheritance
+3. Polymorphism
+4. Abstraction
+
+### Basic concepts
+
+- Class: Blueprint for creating objects.
+- Object: Instance of a class.
+- Constructor: Initializes an object.
+- Method: Function associated with a class.
+- Attribute: Data associated with an object.
+
+## WHY
+
+OOP helps:
+
+- Reuse code.
+- Organize large applications.
+- Reduce duplication.
+- Improve maintainability.
+- Separate responsibilities.
+
+## HOW
+
+Consider a marketplace application.
+
+```
+              Marketplace
+                  |
+          User (Base Class)
+                  |
+         ┌────────┼────────┐
+         ↓        ↓        ↓
+       Farmer   Buyer   DeliveryPartner
+```
+
+A common user class contains shared information. Specialized classes can inherit those properties and provide their own behavior.
+
+## WHERE
+
+In backend applications, OOP is used for:
+
+- User management.
+- Product management.
+- Order processing.
+- Authentication.
+- Payment services.
+
+## IMPLEMENTATION
+
+```
+class User:    def __init__(self, name):        self.name = name    def display(self):        print(self.name)class Farmer(User):    def sell_product(self):        print("Farmer sells products")farmer = Farmer("Akshay")farmer.display()farmer.sell_product()
+```
+
+### The four pillars
+
+| Pillar        | Meaning                                        | Example                   |
+| ------------- | ---------------------------------------------- | ------------------------- |
+| Encapsulation | Bundling data and behavior, controlling access | Bank account              |
+| Inheritance   | Acquiring behavior from another class          | Farmer inherits User      |
+| Polymorphism  | Same interface, different behavior             | Different payment methods |
+| Abstraction   | Hiding implementation details                  | Payment interface         |
+
+Interview trap: Python doesn't enforce private attributes in the same way as some languages. A double underscore triggers name mangling; it isn't absolute security.
+
+# 3. SQL and DBMS
+
+Very high priority
+
+## WHAT
+
+SQL — Structured Query Language
+
+A language used to manage and query relational databases.
+
+DBMS — Database Management System
+
+Software used to create, store, organize, retrieve and manage data.
+
+RDBMS — Relational Database Management System
+
+A DBMS that organizes data primarily into related tables.
+
+Examples: PostgreSQL, MySQL and SQL Server.
+
+## WHY
+
+Imagine your marketplace has thousands of:
+
+- Farmers.
+- Buyers.
+- Products.
+- Orders.
+- Payments.
+
+You need a reliable way to store and retrieve this information.
+
+That's why databases are necessary.
+
+## HOW
+
+A relational database organizes data into tables.
+
+Example:
+
+Users table
+
+| user_id | name   | role   |
+| ------- | ------ | ------ |
+| 1       | Akshay | Buyer  |
+| 2       | Rahul  | Farmer |
+
+Orders table
+
+| order_id | user_id | amount |
+| -------- | ------- | ------ |
+| 101      | 1       | 500    |
+| 102      | 2       | 750    |
+
+The `user_id` in Orders can reference the primary key in Users.
+
+### Important database concepts
+
+| Concept       | Meaning                                 |
+| ------------- | --------------------------------------- |
+| Primary Key   | Uniquely identifies a record            |
+| Foreign Key   | References a key in another table       |
+| Unique        | Prevents duplicate values               |
+| NOT NULL      | Prevents null values                    |
+| JOIN          | Combines data from tables               |
+| Index         | Helps accelerate data retrieval         |
+| Normalization | Organizes tables to reduce redundancy   |
+| Transaction   | Group of database operations            |
+| ACID          | Four transaction reliability properties |
+
+### CRUD
+
+- Create
+- Read
+- Update
+- Delete
+
+## IMPLEMENTATION
+
+```
+CREATE TABLE Users (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    age INT
+);
+
+INSERT INTO Users VALUES (1, 'Akshay', 21);
+
+SELECT * FROM Users;
+
+UPDATE Users
+SET age = 22
+WHERE id = 1;
+
+DELETE FROM Users
+WHERE id = 1;
+```
+
+### Important SQL interview concepts
+
+WHERE vs HAVING
+
+WHERE filters rows before grouping; HAVING filters groups after aggregation.
+
+JOIN types
+
+| Join            | Purpose                                     |
+| --------------- | ------------------------------------------- |
+| INNER JOIN      | Matching records                            |
+| LEFT JOIN       | All left records and matching right records |
+| RIGHT JOIN      | All right records and matching left records |
+| FULL OUTER JOIN | All records from both sides                 |
+
+ACID
+
+- Atomicity: All or nothing.
+- Consistency: Maintains database rules.
+- Isolation: Controls transaction interference.
+- Durability: Committed changes persist.
+
+### Real-world use
+
+Your Farm Marketplace needs database tables for farmers, products, orders and buyers. Your Cloud Cart backend also needs persistent product and order information.
+
+# 4. HTTP and REST API
+
+## WHAT
+
+HTTP — Hypertext Transfer Protocol
+
+A communication protocol used for transferring information between clients and servers.
+
+REST — Representational State Transfer
+
+An architectural style for designing networked applications.
+
+REST API is an API designed around REST principles, commonly using HTTP.
+
+## WHY
+
+A mobile application needs a way to communicate with its backend.
+
+For example:
+
+```
+React Native App
+       ↓
+    REST API
+       ↓
+     Backend
+       ↓
+    Database
+```
+
+## HOW
+
+The client makes a request. The server processes it and sends a response.
+
+### HTTP methods
+
+| Method | Purpose          | Example        |
+| ------ | ---------------- | -------------- |
+| GET    | Retrieve         | Get products   |
+| POST   | Create           | Add a product  |
+| PUT    | Replace resource | Update product |
+| PATCH  | Partially update | Change price   |
+| DELETE | Delete           | Remove product |
+
+### HTTP status codes
+
+| Code | Meaning               |
+| ---- | --------------------- |
+| 200  | OK                    |
+| 201  | Created               |
+| 204  | No Content            |
+| 400  | Bad Request           |
+| 401  | Unauthorized          |
+| 403  | Forbidden             |
+| 404  | Not Found             |
+| 500  | Internal Server Error |
+
+### Important security terminology
+
+JWT — JSON Web Token: A compact token format commonly used to represent claims between systems.
+
+Bearer Token: An access token presented in an HTTP Authorization header.
+
+Middleware: Software that processes requests and responses between different stages of an application.
+
+## IMPLEMENTATION
+
+Example:
+
+```
+GET /api/products
+```
+
+Response:
+
+```
+{
+  "id": 101,
+  "name": "Tomato",
+  "price": 40
+}
+```
+
+POST request:
+
+```
+POST /api/products
+Content-Type: application/json
+```
+
+```
+{
+  "name": "Potato",
+  "price": 30
+}
+```
+
+### REST principles
+
+1. Client-server architecture.
+2. Stateless communication.
+3. Cacheability where appropriate.
+4. Uniform interface.
+5. Layered system.
+6. Code-on-demand is an optional constraint.
+
+Interview answer:
+
+"REST API is an interface that allows client and server applications to communicate using resource-oriented operations, commonly over HTTP. It uses methods such as GET, POST, PUT, PATCH and DELETE. It helps separate frontend presentation from backend business logic and database operations."
+
+# 5. Backend development: Node.js, Express, FastAPI and Flask
+
+These are not all the same type of technology.
+
+## A. Node.js
+
+### WHAT
+
+Node.js is a JavaScript runtime that allows JavaScript to run outside a browser.
+
+### WHY
+
+It enables JavaScript-based backend development.
+
+### HOW
+
+It uses Google's V8 JavaScript engine and provides facilities for event-driven, non-blocking I/O.
+
+### WHERE
+
+Backend servers, APIs, command-line applications and real-time applications.
+
+### IMPLEMENTATION
+
+```
+const http = require("http");
+
+const server = http.createServer((req, res) => {
+    res.end("Hello from Node.js");
+});
+
+server.listen(3000);
+```
+
+## B. Express.js
+
+### WHAT
+
+Express is a web framework for Node.js.
+
+### WHY
+
+It simplifies routing, middleware and HTTP request/response handling.
+
+### HOW
+
+Request → middleware → route handler → response.
+
+### IMPLEMENTATION
+
+```
+const express = require("express");
+
+const app = express();
+
+app.use(express.json());
+
+app.get("/products", (req, res) => {
+    res.json({ message: "Products retrieved" });
+});
+
+app.listen(3000);
+```
+
+## C. FastAPI
+
+### WHAT
+
+FastAPI is a modern Python framework for building APIs.
+
+### WHY
+
+It offers type-based validation, automatic documentation and native ASGI support.
+
+### HOW
+
+It uses Python type hints and Pydantic validation.
+
+### IMPLEMENTATION
+
+```
+from fastapi import FastAPIapp = FastAPI()@app.get("/products")def get_products():    return {"products": ["Tomato", "Potato"]}
+```
+
+Run:
+
+```
+uvicorn main:app --reload
+```
+
+Documentation:
+
+```
+http://127.0.0.1:8000/docs
+```
+
+## D. Flask
+
+### WHAT
+
+Flask is a lightweight Python web framework, often called a microframework.
+
+### WHY
+
+It gives developers a simple and flexible foundation for web applications and APIs.
+
+### HOW
+
+It maps URL routes to Python functions.
+
+### IMPLEMENTATION
+
+```
+from flask import Flaskapp = Flask(__name__)@app.route("/hello")def hello():    return {"message": "Hello World"}app.run(debug=True)
+```
+
+## Comparison
+
+| Technology | Category           | Main language |
+| ---------- | ------------------ | ------------- |
+| Node.js    | Runtime            | JavaScript    |
+| Express    | Web framework      | JavaScript    |
+| FastAPI    | API framework      | Python        |
+| Flask      | Web microframework | Python        |
+
+### Interview question: FastAPI vs Flask?
+
+"Both are Python web frameworks. Flask is lightweight and flexible, while FastAPI is API-focused and provides integrated request validation, automatic documentation and native asynchronous support through ASGI."
+
+# 6. Git and GitHub
+
+## WHAT
+
+Git: Distributed version control system.
+
+GitHub: Cloud-based platform for hosting Git repositories and collaborating on code.
+
+## WHY
+
+Imagine you develop a project and accidentally delete important code.
+
+Version control helps you:
+
+- Track changes.
+- Restore previous versions.
+- Collaborate with teammates.
+- Work on different features using branches.
+- Review code before merging.
+
+## HOW
+
+```
+Working Directory
+       ↓
+Staging Area
+       ↓
+Local Repository
+       ↓
+Remote Repository (GitHub)
+```
+
+## IMPLEMENTATION
+
+```
+git init
+git status
+git add .
+git commit -m "Initial commit"
+git branch
+git push
+git pull
+git clone <repository-url>
+```
+
+Important distinctions:
+
+- `git add`: stages changes.
+- `git commit`: saves a snapshot in local history.
+- `git push`: sends commits to a remote.
+- `git pull`: fetches and integrates remote changes.
+- `git merge`: combines branches.
+
+Interview answer:
+
+"Git helps track code changes through version control. GitHub provides a platform to host repositories and collaborate through branches, pull requests and code reviews."
+
+# 7. TypeScript and frontend fundamentals
+
+## WHAT
+
+TypeScript is a strongly typed programming language built on JavaScript. It adds a static type system and compiles to JavaScript.
+
+### Related technologies
+
+- JavaScript: Programming language.
+- TypeScript: JavaScript with additional type-system features.
+- React: JavaScript library for user interfaces.
+- React Native: Framework for building native mobile applications using React concepts.
+
+## WHY
+
+TypeScript helps catch many type-related mistakes during development and makes larger applications easier to maintain.
+
+## HOW
+
+Types describe the structure of data.
+
+## IMPLEMENTATION
+
+```
+interface User {
+    name: string;
+    age: number;
+}
+
+const user: User = {
+    name: "Akshay",
+    age: 21
+};
+```
+
+### React concepts
+
+| Concept   | Meaning                                         |
+| --------- | ----------------------------------------------- |
+| Component | Reusable UI building block                      |
+| Props     | Data passed to a component                      |
+| State     | Data managed by a component                     |
+| Hooks     | Functions for using React features              |
+| useState  | Manages component state                         |
+| useEffect | Synchronizes with external systems              |
+| JSX       | JavaScript syntax extension for UI descriptions |
+
+Example:
+
+```
+import { useState } from "react";
+
+function Counter() {
+    const [count, setCount] = useState(0);
+
+    return (
+        <button onClick={() => setCount(count + 1)}>
+            {count}
+        </button>
+    );
+}
+```
+
+### Where?
+
+Your RakshaNet project uses TypeScript, and your Farm Marketplace work is relevant to mobile/frontend architecture.
+
+Part 2: Data Science, Machine Learning and Deep Learning
+
+# 8. NumPy, Pandas and Scikit-learn
+
+These three libraries form an important foundation for practical Machine Learning.
+
+## A. NumPy
+
+Full form: Numerical Python.
+
+WHAT: A Python library for numerical computing, especially arrays, matrices and mathematical operations.
+
+WHY: Normal Python lists are not optimized for large-scale numerical computations. NumPy provides efficient numerical operations.
+
+HOW: It uses multidimensional arrays called `ndarray` and supports vectorized operations.
+
+WHERE: Machine learning, data science, scientific computing and image processing.
+
+IMPLEMENTATION:
+
+```
+import numpy as npnumbers = np.array([10, 20, 30, 40])print(numbers.mean())print(numbers.max())print(numbers * 2)
+```
+
+Output:
+
+```
+25.0
+40
+[20 40 60 80]
+```
+
+Important functions:
+
+| Function       | Purpose                   |
+| -------------- | ------------------------- |
+| `np.array()`   | Creates an array          |
+| `np.mean()`    | Calculates average        |
+| `np.sum()`     | Calculates sum            |
+| `np.max()`     | Finds maximum             |
+| `np.reshape()` | Changes dimensions        |
+| `np.zeros()`   | Creates zero-filled array |
+| `np.random`    | Generates random values   |
+
+Interview answer: NumPy is used for fast numerical computation and multidimensional array manipulation in Python.
+
+## B. Pandas
+
+WHAT: Pandas is a Python library for data manipulation and analysis.
+
+WHY: Real-world datasets often contain missing values, duplicates, incorrect formats and inconsistent records.
+
+Pandas makes cleaning and analyzing such data easier.
+
+HOW: It mainly provides two data structures:
+
+- Series: One-dimensional labeled data.
+- DataFrame: Two-dimensional tabular data with rows and columns.
+
+WHERE: Data preprocessing, data cleaning, exploratory data analysis and ML workflows.
+
+IMPLEMENTATION:
+
+```
+import pandas as pddata = {    "Name": ["Akshay", "Rahul", "Anu"],    "Age": [21, 22, 23],    "Salary": [50000, 45000, 55000]}df = pd.DataFrame(data)print(df.head())print(df.describe())print(df[df["Salary"] > 50000])
+```
+
+Important functions:
+
+| Function            | Purpose                |
+| ------------------- | ---------------------- |
+| `read_csv()`        | Reads CSV              |
+| `head()`            | Displays first rows    |
+| `info()`            | Shows data information |
+| `describe()`        | Statistical summary    |
+| `isnull()`          | Detects missing values |
+| `dropna()`          | Removes missing values |
+| `fillna()`          | Fills missing values   |
+| `drop_duplicates()` | Removes duplicates     |
+| `groupby()`         | Groups records         |
+| `to_csv()`          | Exports CSV            |
+
+Interview answer: Pandas is used to load, clean, manipulate and analyze structured datasets using Series and DataFrames.
+
+## C. Scikit-learn
+
+WHAT: Scikit-learn is a Python machine-learning library. `sklearn` is its import name.
+
+WHY: It provides ready-to-use algorithms and tools, so developers do not need to implement every ML algorithm from scratch.
+
+HOW: It provides a consistent API for preprocessing, training, predicting and evaluating models.
+
+WHERE: Classification, regression, clustering, feature preprocessing and model evaluation.
+
+IMPLEMENTATION:
+
+```
+from sklearn.model_selection import train_test_splitfrom sklearn.linear_model import LinearRegressionX = [[1000], [1500], [2000], [2500]]y = [30, 45, 60, 75]X_train, X_test, y_train, y_test = train_test_split(    X, y, test_size=0.25, random_state=42)model = LinearRegression()model.fit(X_train, y_train)prediction = model.predict(X_test)print(prediction)
+```
+
+Important functions:
+
+- `fit()` — learns from training data.
+- `predict()` — makes predictions.
+- `transform()` — transforms data.
+- `fit_transform()` — learns transformation parameters and transforms data.
+- `score()` — returns an estimator-specific score.
+
+### Difference between all three
+
+| Library      | Main responsibility  |
+| ------------ | -------------------- |
+| NumPy        | Numerical operations |
+| Pandas       | Data manipulation    |
+| Scikit-learn | Machine learning     |
+
+### How they work together
+
+```
+CSV Dataset
+     ↓
+Pandas
+     ↓
+Clean and analyze data
+     ↓
+NumPy
+     ↓
+Numerical representation
+     ↓
+Scikit-learn
+     ↓
+Train ML model
+     ↓
+Evaluate and predict
+```
+
+# 9. Machine Learning (ML)
+
+Very high priority
+
+## WHAT
+
+ML — Machine Learning is a subset of Artificial Intelligence in which systems learn patterns from data to make predictions or decisions without requiring explicit programming of every rule.
+
+## WHY
+
+Consider email spam detection.
+
+Writing individual rules for every possible spam email is difficult.
+
+Instead, we train a model using historical examples of spam and legitimate emails.
+
+The model learns patterns and predicts the class of new emails.
+
+## HOW
+
+The typical ML lifecycle:
+
+```
+Data Collection
+      ↓
+Data Cleaning
+      ↓
+Exploratory Data Analysis
+      ↓
+Feature Engineering
+      ↓
+Train/Test Split
+      ↓
+Choose Algorithm
+      ↓
+Model Training
+      ↓
+Evaluation
+      ↓
+Hyperparameter Tuning
+      ↓
+Deployment
+      ↓
+Monitoring
+```
+
+## WHERE
+
+- Fraud detection.
+- Recommendation systems.
+- Sales forecasting.
+- Customer churn prediction.
+- Medical diagnosis support.
+- Credit risk estimation.
+- Sustainability predictions.
+
+## IMPLEMENTATION
+
+### Types of Machine Learning
+
+1\. Supervised Learning
+
+Learns from labeled data: input and known output.
+
+Example: Predict house prices.
+
+2\. Unsupervised Learning
+
+Learns patterns from unlabeled data.
+
+Example: Grouping customers based on purchasing behavior.
+
+3\. Reinforcement Learning
+
+An agent learns by interacting with an environment and receiving rewards or penalties.
+
+Example: A game-playing system.
+
+### Supervised learning: two major types
+
+Regression: Predicts numerical values.
+
+Examples: house price, salary, temperature.
+
+Classification: Predicts categories.
+
+Examples: spam/not spam, fraud/not fraud.
+
+### Important ML algorithms
+
+| Algorithm           | Full form / purpose                      |
+| ------------------- | ---------------------------------------- |
+| Linear Regression   | Predicts continuous numerical values     |
+| Logistic Regression | Classification algorithm                 |
+| Decision Tree       | Makes predictions through decision rules |
+| Random Forest       | Ensemble of decision trees               |
+| KNN                 | K-Nearest Neighbors                      |
+| SVM                 | Support Vector Machine                   |
+| K-Means             | Clustering algorithm                     |
+| Gradient Boosting   | Ensemble learning method                 |
+
+### Important ML terminology
+
+| Term             | Meaning                                         |
+| ---------------- | ----------------------------------------------- |
+| Feature          | Input variable                                  |
+| Label/Target     | Desired output                                  |
+| Training         | Learning model parameters                       |
+| Testing          | Evaluating on unseen data                       |
+| Validation       | Selecting/tuning model                          |
+| Overfitting      | Learns training data too specifically           |
+| Underfitting     | Fails to learn the underlying pattern           |
+| Cross-validation | Repeated evaluation using different data splits |
+| Hyperparameter   | Configuration selected before/during training   |
+| Parameter        | Value learned by the model                      |
+
+### Evaluation metrics
+
+Accuracy
+
+\\[ Accuracy=\frac{TP+TN}{TP+TN+FP+FN} \\]
+
+Precision
+
+\\[ Precision=\frac{TP}{TP+FP} \\]
+
+Recall
+
+\\[ Recall=\frac{TP}{TP+FN} \\]
+
+F1-score
+
+\\[ F1=2\times\frac{Precision\times Recall}{Precision+Recall} \\]
+
+Remember:
+
+- Precision: When the model predicts positive, how often is it correct?
+- Recall: Of all actual positive cases, how many did it detect?
+- F1: Harmonic mean of precision and recall.
+
+### Practical implementation
+
+A Random Forest classification example:
+
+```
+from sklearn.ensemble import RandomForestClassifierX = [    [20, 2],    [25, 5],    [35, 1],    [45, 8],    [30, 2],    [50, 9]]y = [0, 0, 0, 1, 0, 1]model = RandomForestClassifier(random_state=42)model.fit(X, y)prediction = model.predict([[40, 7]])print(prediction)
+```
+
+Here, the model learns a classification relationship between two features and a binary target. This is illustrative data, not a real production model.
+
+### Interview answer
+
+"Machine Learning is a subset of AI that enables computers to learn patterns from data and make predictions. Its major types are supervised, unsupervised and reinforcement learning. A typical ML workflow involves data preprocessing, feature engineering, model training, evaluation and deployment."
+
+# 10. Deep Learning (DL)
+
+## WHAT
+
+DL — Deep Learning is a subset of Machine Learning that uses neural networks with multiple layers to learn complex patterns.
+
+## WHY
+
+Traditional ML often needs manually designed features.
+
+Deep learning can automatically learn useful representations from data, making it particularly powerful for images, audio, speech and natural language.
+
+## HOW
+
+A neural network consists of:
+
+```
+Input Layer
+     ↓
+Hidden Layers
+     ↓
+Output Layer
+```
+
+### Important concepts
+
+| Concept             | Meaning                                                            |
+| ------------------- | ------------------------------------------------------------------ |
+| Neuron              | Basic computational unit                                           |
+| Weight              | Learnable parameter controlling input contribution                 |
+| Bias                | Learnable offset                                                   |
+| Activation function | Adds non-linearity                                                 |
+| Forward propagation | Computes predictions                                               |
+| Loss function       | Measures prediction error                                          |
+| Backpropagation     | Calculates gradients                                               |
+| Gradient descent    | Uses gradients to update parameters                                |
+| Epoch               | One complete pass over the training dataset                        |
+| Batch               | Group of samples processed together                                |
+| Dropout             | Regularization method that randomly disables units during training |
+
+### Neuron equation
+
+\\[ z=w_1x_1+w_2x_2+b \\]
+
+\\[ Output=f(z) \\]
+
+Where `f` is an activation function.
+
+### Activation functions
+
+| Function | Purpose                                   |
+| -------- | ----------------------------------------- |
+| ReLU     | Common hidden-layer activation            |
+| Sigmoid  | Outputs between 0 and 1                   |
+| Tanh     | Outputs between -1 and 1                  |
+| Softmax  | Produces a class probability distribution |
+
+## WHERE
+
+- Facial recognition.
+- Image classification.
+- Speech recognition.
+- Natural language processing.
+- Autonomous systems.
+- Generative AI.
+
+## IMPLEMENTATION
+
+The fundamental learning process:
+
+```
+Input
+  ↓
+Forward Propagation
+  ↓
+Prediction
+  ↓
+Loss Calculation
+  ↓
+Backpropagation
+  ↓
+Gradient-based Optimization
+  ↓
+Updated Weights
+  ↓
+Repeat
+```
+
+### CNN, RNN, LSTM and Transformer
+
+| Architecture | Typical application                           |
+| ------------ | --------------------------------------------- |
+| CNN          | Image and spatial data                        |
+| RNN          | Sequential data                               |
+| LSTM         | Learning longer-term sequence dependencies    |
+| Transformer  | Attention-based sequence and multimodal tasks |
+
+### Interview answer
+
+"Deep Learning is a subset of machine learning that uses multilayer neural networks. It learns complex representations from data. During training, the model performs forward propagation, calculates loss and uses backpropagation with an optimizer to update weights."
+
+# 11. TensorFlow, PyTorch and OpenCV
+
+These are three different tools with overlapping application areas.
+
+## A. TensorFlow
+
+WHAT: An open-source machine-learning framework developed by Google.
+
+WHY: Used to build, train and deploy machine-learning and deep-learning models.
+
+HOW: Provides tensors, automatic differentiation, neural-network layers and optimization tools. Keras is a high-level interface commonly used with TensorFlow.
+
+WHERE: Deep learning, computer vision, NLP and production ML.
+
+IMPLEMENTATION:
+
+```
+import tensorflow as tfmodel = tf.keras.Sequential([    tf.keras.layers.Dense(16, activation="relu"),    tf.keras.layers.Dense(1, activation="sigmoid")])model.compile(    optimizer="adam",    loss="binary_crossentropy",    metrics=["accuracy"])
+```
+
+## B. PyTorch
+
+WHAT: An open-source machine-learning framework originally developed at Facebook AI Research (now Meta AI).
+
+WHY: Used for developing, training and experimenting with neural networks.
+
+HOW: Provides tensors, automatic differentiation through autograd, neural-network components and optimizers.
+
+WHERE: Deep learning, research, computer vision and language models.
+
+IMPLEMENTATION:
+
+```
+import torchx = torch.tensor([1.0, 2.0, 3.0])y = x * 2print(y)
+```
+
+## C. OpenCV
+
+Full form: Open Source Computer Vision Library.
+
+WHAT: A library for image processing and computer-vision applications.
+
+WHY: Helps developers capture, manipulate and analyze visual data.
+
+HOW: Provides image, video, filtering, transformation and vision-processing operations.
+
+WHERE: Camera applications, document scanning, object detection pipelines, image processing and robotics.
+
+IMPLEMENTATION:
+
+```
+import cv2image = cv2.imread("photo.jpg")if image is None:    raise ValueError("Image not found")resized = cv2.resize(image, (224, 224))cv2.imshow("Image", resized)cv2.waitKey(0)cv2.destroyAllWindows()
+```
+
+### Difference
+
+| Technology | Primary responsibility                     |
+| ---------- | ------------------------------------------ |
+| TensorFlow | ML/DL framework                            |
+| PyTorch    | ML/DL framework                            |
+| OpenCV     | Image/video processing and computer vision |
+
+How they work together:
+
+```
+Camera / Image
+      ↓
+OpenCV
+      ↓
+Image preprocessing
+      ↓
+PyTorch / TensorFlow
+      ↓
+Neural Network
+      ↓
+Prediction
+```
+
+# 12. Computer Vision (CV)
+
+## WHAT
+
+CV — Computer Vision is a field of AI that enables computers to extract meaningful information from images and videos.
+
+## WHY
+
+A computer receives pixels, not human interpretations.
+
+Computer vision processes that visual data to identify objects, faces, text and other patterns.
+
+## HOW
+
+A general pipeline:
+
+```
+Image / Video
+     ↓
+Preprocessing
+     ↓
+Feature Extraction / Representation
+     ↓
+Computer Vision Model
+     ↓
+Prediction
+```
+
+### Important computer-vision tasks
+
+| Task                 | Purpose                          | Example           |
+| -------------------- | -------------------------------- | ----------------- |
+| Image Classification | Identifies image class           | Cat or dog        |
+| Object Detection     | Identifies objects and locations | Detect cars       |
+| Segmentation         | Identifies pixel-level regions   | Separate a person |
+| Face Detection       | Finds faces                      | Locate faces      |
+| Face Recognition     | Matches identity                 | Face verification |
+| OCR                  | Extracts text from images        | Read invoices     |
+
+OCR — Optical Character Recognition.
+
+### Image representation
+
+A digital image is represented using pixels.
+
+A standard RGB pixel has three channel values:
+
+```
+[Red, Green, Blue]
+```
+
+For example:
+
+```
+[255, 0, 0] = Pure red
+```
+
+Image shape:
+
+```
+Height × Width × Channels
+```
+
+An RGB image with dimensions 224 × 224 has shape:
+
+```
+224 × 224 × 3
+```
+
+## WHERE
+
+- Self-driving vehicles.
+- Medical image analysis.
+- Facial verification.
+- Industrial quality inspection.
+- Surveillance.
+- Agriculture.
+- Document digitization.
+
+## IMPLEMENTATION
+
+A simple image processing pipeline:
+
+```
+import cv2image = cv2.imread("plant.jpg")if image is None:    raise ValueError("Could not load image")gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)edges = cv2.Canny(gray, 100, 200)cv2.imwrite("edges.jpg", edges)
+```
+
+This converts an image to grayscale and detects edges.
+
+### Important interview distinction
+
+- Image processing: Modifies or analyzes image pixels.
+- Computer vision: Extracts meaning or useful information from visual data.
+- OpenCV: A software library used to implement many image-processing and vision tasks.
+- CNN: A deep-learning architecture particularly effective for image/spatial patterns.
+
+Part 3: Generative AI, LLMs, RAG and Agentic AI
+
+# 13. Generative AI
+
+Important resume topic
+
+## WHAT
+
+Generative AI (GenAI) is a category of artificial intelligence that generates new content based on patterns learned from training data.
+
+It can generate:
+
+- Text.
+- Images.
+- Audio.
+- Video.
+- Code.
+- Music.
+
+Examples: GPT-based applications, image-generation models and AI coding assistants.
+
+## WHY
+
+Traditional ML frequently predicts a class or numerical value.
+
+Generative AI can produce new content.
+
+```
+Traditional ML:
+Input → Predict → Output
+
+Generative AI:
+Prompt → Generate → New content
+```
+
+## HOW
+
+```
+Training Data
+     ↓
+Deep Learning Model
+     ↓
+Learned Parameters
+     ↓
+User Prompt
+     ↓
+Generate Content
+```
+
+The model learns statistical relationships in the training data. It uses its learned parameters and the available context to generate new output.
+
+## WHERE
+
+- AI chatbots.
+- Content creation.
+- Code generation.
+- Document summarization.
+- Intelligent customer support.
+- AI-powered search.
+- Automation systems.
+
+## IMPLEMENTATION
+
+A simplified example using a language-model API:
+
+```
+# Conceptual structure: actual client and method# depend on the chosen model provider.response = client.generate(    prompt="Explain machine learning in simple terms.")print(response)
+```
+
+The model receives the prompt and generates a response. In real applications, also handle API authentication, errors, rate limits and sensitive data properly.
+
+## 13.1 LLM — Large Language Model
+
+### WHAT
+
+An LLM is a large neural-network model trained on extensive text data to understand and generate language.
+
+Examples include GPT, Gemini, Claude and Llama model families.
+
+### WHY
+
+It enables:
+
+- Natural-language conversation.
+- Summarization.
+- Question answering.
+- Code generation.
+- Translation.
+- Information extraction.
+
+### HOW
+
+Many modern LLMs use the Transformer architecture and autoregressive next-token prediction.
+
+```
+User Prompt
+     ↓
+Tokenization
+     ↓
+Token IDs
+     ↓
+LLM
+     ↓
+Next-token probabilities
+     ↓
+Selected token
+     ↓
+Repeat
+     ↓
+Generated response
+```
+
+### WHERE
+
+Chatbots, coding assistants, document analysis, AI search and enterprise automation.
+
+### IMPLEMENTATION
+
+A simplified prompt:
+
+```
+You are a technical interview assistant.
+
+Explain REST API with:
+1. Definition
+2. Purpose
+3. Working
+4. Example
+5. Interview questions
+```
+
+The LLM uses this context to generate an answer.
+
+## 13.2 Tokens and Tokenization
+
+WHAT: A token is a unit of text processed by a language model.
+
+Tokenization converts text into tokens and their corresponding numerical IDs.
+
+WHY: Neural networks process numerical representations, not raw text in its original form.
+
+HOW:
+
+```
+Text
+ ↓
+Tokenizer
+ ↓
+Tokens
+ ↓
+Token IDs
+ ↓
+Model
+```
+
+A token might be a word, part of a word, punctuation or another text unit.
+
+WHERE: Every text-based LLM pipeline.
+
+IMPLEMENTATION:
+
+A conceptual example:
+
+```
+text = "Machine learning is interesting"tokens = tokenizer.encode(text)print(tokens)
+```
+
+The exact token IDs depend on the tokenizer.
+
+Interview answer: Tokenization is the process of converting text into smaller units called tokens so that a language model can process the text numerically.
+
+## 13.3 Transformer
+
+WHAT: A neural-network architecture introduced in the 2017 research paper Attention Is All You Need.
+
+WHY: It provides an effective way to model relationships between elements in sequential data, without relying on traditional recurrent processing.
+
+HOW:
+
+Important components include:
+
+- Attention.
+- Multi-head attention.
+- Feed-forward networks.
+- Positional information.
+- Residual connections.
+- Normalization.
+
+There are different arrangements:
+
+| Architecture    | Example/use                       |
+| --------------- | --------------------------------- |
+| Encoder-only    | BERT-style language understanding |
+| Decoder-only    | Autoregressive text generation    |
+| Encoder-decoder | Sequence-to-sequence tasks        |
+
+### Self-attention
+
+Self-attention helps a model represent relationships between different tokens in a sequence.
+
+Example:
+
+"The farmer sold crops because they were ready."
+
+Attention mechanisms help a model learn relevant relationships between the words.
+
+### Q, K and V
+
+- Q: Query.
+- K: Key.
+- V: Value.
+
+The scaled dot-product attention formula is:
+
+\\[ Attention(Q,K,V)=softmax\left(\frac{QK^T}{\sqrt{d_k}}\right)V \\]
+
+WHERE: Modern language models, translation, summarization, image models and multimodal systems.
+
+INTERVIEW ANSWER: The Transformer is a neural-network architecture based on attention mechanisms that allow a model to capture relationships between tokens. It is the foundation of many modern large language models.
+
+## 13.4 Embeddings
+
+WHAT: Embeddings are numerical vector representations of data such as words, sentences, images and documents.
+
+WHY: Computers need numerical representations to compare and process semantic information.
+
+HOW:
+
+```
+"How to cancel my order?"
+          ↓
+    Embedding Model
+          ↓
+[0.12, 0.54, -0.32, ...]
+```
+
+Similar meanings can be represented by vectors that are close according to an appropriate similarity metric.
+
+WHERE:
+
+- Semantic search.
+- RAG.
+- Recommendation systems.
+- Document retrieval.
+- Clustering.
+
+IMPLEMENTATION:
+
+```
+sentence = "How can I cancel my order?"vector = embedding_model.encode(sentence)print(vector)
+```
+
+This is pseudocode: the actual method depends on the embedding library.
+
+## 13.5 Prompt Engineering
+
+WHAT: Designing instructions and context to guide an AI model toward a desired response.
+
+WHY: A well-structured prompt makes the requested task, constraints and output format clearer.
+
+HOW:
+
+A useful prompt can contain:
+
+```
+Role
+Task
+Context
+Constraints
+Output format
+Examples
+```
+
+WHERE: Chatbots, code assistants, document summarization, AI automation and agent systems.
+
+IMPLEMENTATION:
+
+Weak prompt:
+
+```
+Explain Python.
+```
+
+Better prompt:
+
+```
+Explain Python to a beginner.
+
+Include:
+1. Definition
+2. Why it is used
+3. Internal working
+4. Practical example
+5. Interview questions
+
+Use simple English.
+```
+
+## 13.6 Other important GenAI terms
+
+| Term           | Meaning                                                           | Importance                   |
+| -------------- | ----------------------------------------------------------------- | ---------------------------- |
+| Context Window | Maximum context a model can process in a particular configuration | Long conversations/documents |
+| Temperature    | Controls randomness during token sampling                         | Output variation             |
+| Hallucination  | Unsupported or incorrect generated information                    | Reliability                  |
+| Fine-tuning    | Further training a pretrained model                               | Task/domain adaptation       |
+| Pretraining    | Initial large-scale model training                                | General capabilities         |
+| Multimodal AI  | AI working with multiple modalities                               | Text, images, audio          |
+| Inference      | Using a trained model to produce output                           | Deployment                   |
+
+### Fine-tuning vs Prompt Engineering vs RAG
+
+| Method             | What changes?                                       |
+| ------------------ | --------------------------------------------------- |
+| Prompt Engineering | Input instructions/context                          |
+| Fine-tuning        | Model parameters through further training           |
+| RAG                | Information supplied to the model at inference time |
+
+These solve different problems.
+
+# 14. RAG and Vector Databases
+
+Very important GenAI topic
+
+## WHAT
+
+RAG — Retrieval-Augmented Generation.
+
+RAG is an architecture that combines information retrieval with generative AI.
+
+It retrieves relevant external information and provides it as context to an LLM.
+
+## WHY
+
+Imagine a company has 10,000 internal documents.
+
+An ordinary general-purpose LLM might not know their private contents.
+
+You need a way to retrieve relevant company information and provide it to the model.
+
+RAG solves this problem without requiring the entire model to be retrained whenever a document changes.
+
+## HOW
+
+```
+              DOCUMENTS
+                  ↓
+              Chunking
+                  ↓
+             Embeddings
+                  ↓
+             Vector DB
+                  ↓
+
+User Query → Embedding
+                  ↓
+           Similarity Search
+                  ↓
+          Relevant Documents
+                  ↓
+         Prompt + Retrieved Data
+                  ↓
+                  LLM
+                  ↓
+             Final Answer
+```
+
+## Important RAG components
+
+### 1. Document ingestion
+
+Collect documents such as PDF files, Word files and webpages.
+
+### 2. Chunking
+
+Split large documents into smaller sections.
+
+Why?
+
+A document may be too large to pass in its entirety or may contain lots of irrelevant information.
+
+### 3. Embedding generation
+
+Convert each chunk into a numerical vector.
+
+### 4. Vector database
+
+Store the vectors and associated document metadata.
+
+### 5. Retrieval
+
+Find relevant documents for the user's question.
+
+### 6. Augmentation
+
+Add the retrieved content to the LLM's prompt.
+
+### 7. Generation
+
+The model creates a response using the provided information.
+
+## Vector Database
+
+WHAT: A database designed to store, index and search vector embeddings.
+
+WHY: Traditional keyword search is not always sufficient for finding semantically related content.
+
+HOW: It indexes vectors and performs similarity searches, often using approximate nearest-neighbor techniques.
+
+WHERE: Semantic search, RAG, recommendations and AI knowledge systems.
+
+Examples:
+
+- Pinecone.
+- Weaviate.
+- Milvus.
+- Chroma.
+- PostgreSQL with pgvector.
+
+### Similarity search
+
+A common measure is cosine similarity:
+
+\\[ Cosine(A,B)=\frac{A\cdot B}{\\|A\\|\\|B\\|} \\]
+
+It measures the similarity of vector directions.
+
+### IMPLEMENTATION — Conceptual RAG pseudocode
+
+```
+# 1. Convert documents into chunkschunks = split_documents(documents)# 2. Generate embeddingsvectors = embedding_model.encode(chunks)# 3. Store vectorsvector_db.add(chunks, vectors)# 4. User asks a questionquery = "What is the refund policy?"# 5. Retrieve related chunksresults = vector_db.search(query)# 6. Supply context to LLManswer = llm.generate(    context=results,    question=query)print(answer)
+```
+
+### RAG vs Fine-tuning
+
+RAG: Provides external knowledge during inference.
+
+Fine-tuning: Changes learned parameters through additional training.
+
+Interview answer:
+
+"RAG stands for Retrieval-Augmented Generation. It retrieves relevant information from an external knowledge source, such as a vector database, and provides it to an LLM as context to generate a grounded response. It is useful for private or frequently updated information."
+
+# 15. Tool Calling and AI Agents
+
+These two concepts are especially relevant because your Farm Marketplace mentions an AI agent, and your BharatCares internship mentions Agentic AI and automation.&#x20;
+
+AkshayGabrieal_R_Resume.docx
+
+AkshayGabrieal_R_Resume.docx
+
+
+
+## A. Tool Calling
+
+### WHAT
+
+Tool calling is a capability through which an AI model requests the execution of external functions, APIs or services.
+
+### WHY
+
+An LLM alone cannot necessarily:
+
+- Access your private database.
+- Send emails.
+- Check live inventory.
+- Execute payments.
+- Fetch current information.
+
+Tools enable interaction with external systems.
+
+### HOW
+
+```
+User Request
+     ↓
+LLM
+     ↓
+Select Tool
+     ↓
+Generate Function Arguments
+     ↓
+Application Executes Tool
+     ↓
+Tool Returns Result
+     ↓
+LLM Generates Response
+```
+
+### WHERE
+
+Database access, web search, email automation, calculations, payment processing and enterprise applications.
+
+### IMPLEMENTATION
+
+```
+def get_order(order_id):    return {        "order_id": order_id,        "status": "Shipped"    }result = get_order(101)print(result)
+```
+
+In a real tool-calling system, the LLM requests the function call, and the host application validates and executes the function.
+
+Important: The model's request to call a tool is not itself the execution. Your application actually runs the function.
+
+## B. AI Agents
+
+### WHAT
+
+An AI agent is a system that can understand a goal, make decisions, use tools, observe results and take further actions.
+
+### WHY
+
+A normal chatbot mainly generates answers.
+
+An agent can perform multi-step work toward completing a goal.
+
+### HOW
+
+```
+User Goal
+    ↓
+AI Agent
+    ↓
+LLM / Decision-making
+    ↓
+Planning
+    ↓
+Select Tool
+    ↓
+Execute
+    ↓
+Observe Result
+    ↓
+Choose Next Action
+    ↓
+Complete Task
+```
+
+### WHERE
+
+- Customer support.
+- E-commerce.
+- Personal assistants.
+- Research automation.
+- Workflow automation.
+- Intelligent virtual assistants.
+
+### IMPLEMENTATION — Example
+
+User:
+
+"Check my order and tell me if I can cancel it."
+
+Possible agent workflow:
+
+```
+1. Understand user's request
+         ↓
+2. Call get_order()
+         ↓
+3. Retrieve order status
+         ↓
+4. Call check_policy()
+         ↓
+5. Check cancellation eligibility
+         ↓
+6. Return the result
+```
+
+A cancellation or other irreversible action should require appropriate permission and safeguards before execution.
+
+### Difference
+
+| Tool Calling                             | AI Agent                                |
+| ---------------------------------------- | --------------------------------------- |
+| Capability to request function execution | System coordinating actions             |
+| Often one tool invocation                | May involve multiple tool calls         |
+| Executes a particular task               | Works toward a larger goal              |
+| Doesn't inherently require planning      | Often includes planning/decision-making |
+
+### Important concepts
+
+- Agent: System working toward a goal.
+- Tool: External function/API.
+- Memory: Information retained for future steps, depending on design.
+- Planning: Breaking a task into smaller actions.
+- Orchestration: Coordinating multiple tools or services.
+- Guardrails: Rules and restrictions on what an agent can do.
+- Human-in-the-loop: A person reviews or approves important actions.
+
+### Interview answer
+
+"An AI agent is a system built around an AI model that can understand a goal, plan steps, use external tools and observe their results to complete a task. Unlike a basic chatbot that mainly responds to questions, an agent can interact with databases, APIs and external systems to perform actions."
+
+Part 4: Cloud, Deployment and Database Technologies
+
+# 16. Cloud Computing and Deployment
+
+Important resume topic
+
+## WHAT
+
+Cloud computing is the delivery of computing resources such as servers, storage, databases, networking and software over the internet.
+
+Instead of purchasing and maintaining your own physical servers, you can use cloud infrastructure provided by companies.
+
+## WHY
+
+Suppose you create an e-commerce application.
+
+You need:
+
+- A server to run your backend.
+- Storage for files and images.
+- A database.
+- Networking.
+- Security.
+- Scalability.
+
+Cloud platforms provide these services.
+
+## HOW
+
+```
+Developer
+    ↓
+Upload Application
+    ↓
+Cloud Platform
+    ↓
+Server / Computing
+    ↓
+Application Running
+    ↓
+Users Access Application
+```
+
+## Important cloud service models
+
+| Model | Full form                   | Meaning                             |
+| ----- | --------------------------- | ----------------------------------- |
+| IaaS  | Infrastructure as a Service | Rent computing infrastructure       |
+| PaaS  | Platform as a Service       | Deploy apps using managed platforms |
+| SaaS  | Software as a Service       | Use ready-made software online      |
+
+### Easy example
+
+- IaaS: Virtual machines.
+- PaaS: Managed application deployment.
+- SaaS: Gmail or Microsoft 365.
+
+## A. AWS
+
+Full form: Amazon Web Services.
+
+### WHAT
+
+A cloud computing platform provided by Amazon.
+
+### WHY
+
+Provides scalable computing, storage, databases, networking and application deployment.
+
+### HOW
+
+You select cloud services, configure resources and deploy your application.
+
+### WHERE
+
+Web applications, enterprise software, backend systems, AI infrastructure and data processing.
+
+### Important AWS services
+
+| Service     | Purpose                          |
+| ----------- | -------------------------------- |
+| EC2         | Virtual servers                  |
+| S3          | Object storage                   |
+| RDS         | Managed relational databases     |
+| Lambda      | Serverless functions             |
+| IAM         | Identity and access management   |
+| VPC         | Virtual private cloud networking |
+| CloudWatch  | Monitoring and observability     |
+| API Gateway | Managed API entry point          |
+
+### IMPLEMENTATION — Example deployment architecture
+
+```
+Frontend
+   ↓
+API Gateway
+   ↓
+Backend / Compute
+   ↓
+Database (RDS)
+   ↓
+Storage (S3)
+```
+
+This is an example architecture, not a claim that every service is used in your Cloud Cart project.
+
+## B. IBM Cloud
+
+### WHAT
+
+IBM's cloud computing platform.
+
+### WHY
+
+Provides cloud infrastructure, AI services, data services and enterprise solutions.
+
+### HOW
+
+Developers can use IBM Cloud services to build, host and manage applications.
+
+### WHERE
+
+Enterprise applications, cloud solutions, data platforms and AI workloads.
+
+Your Edunet internship specifically mentions building and deploying a machine-learning model on IBM Cloud and using IBM watsonx.&#x20;
+
+AkshayGabrieal_R_Resume.docx
+
+
+
+## C. Vercel
+
+WHAT: A cloud platform focused on frontend application deployment and web development workflows.
+
+WHY: Makes it convenient to deploy frontend frameworks and web applications.
+
+HOW: Connect a repository, configure the project and deploy. It can also support serverless and edge functionality.
+
+WHERE: Frontend applications, websites and supported full-stack web applications.
+
+IMPLEMENTATION:
+
+```
+GitHub Repository
+       ↓
+Vercel
+       ↓
+Build Application
+       ↓
+Deploy
+       ↓
+Live URL
+```
+
+## D. Render
+
+WHAT: A cloud application hosting platform.
+
+WHY: Simplifies deploying backend servers, APIs, web applications, databases and background workers.
+
+HOW: Connect a code repository, choose the service configuration and deploy.
+
+WHERE: Node.js, Python, API and full-stack deployments.
+
+IMPLEMENTATION:
+
+```
+Code
+ ↓
+GitHub
+ ↓
+Render
+ ↓
+Build
+ ↓
+Deploy backend
+ ↓
+Public API URL
+```
+
+### AWS vs IBM Cloud vs Vercel vs Render
+
+| Platform  | Best-known role                                 |
+| --------- | ----------------------------------------------- |
+| AWS       | Broad cloud infrastructure and managed services |
+| IBM Cloud | Enterprise cloud and AI services                |
+| Vercel    | Frontend/web deployment                         |
+| Render    | Managed web services and backend deployment     |
+
+### Important cloud interview concepts
+
+Scalability: Ability to handle increasing workloads.
+
+Elasticity: Ability to adjust resources according to demand.
+
+Availability: Ability to keep a service accessible.
+
+Load Balancer: Distributes incoming traffic across servers.
+
+Serverless Computing: Developers run functions or services without directly managing the underlying server infrastructure.
+
+Deployment: Making an application available in an environment where users can access it.
+
+CI/CD:
+
+- Continuous Integration.
+- Continuous Delivery or Continuous Deployment.
+
+These practices automate building, testing and releasing software.
+
+### Interview answer
+
+"Cloud computing provides computing resources such as servers, storage and databases over the internet. It helps applications scale without requiring organizations to manage all physical infrastructure. AWS and IBM Cloud provide broad cloud services, while Vercel and Render simplify application deployment."
+
+# 17. Firebase, Supabase, PostgreSQL and MongoDB
+
+These technologies may look similar because they can all support application data, but they have different architectures and purposes.
+
+## A. PostgreSQL
+
+### WHAT
+
+PostgreSQL is an open-source relational database management system.
+
+It is commonly called Postgres.
+
+### WHY
+
+It stores structured and relational data reliably and supports SQL, transactions, constraints and advanced querying.
+
+### HOW
+
+It organizes information in tables connected through keys and relationships.
+
+### WHERE
+
+E-commerce, financial systems, enterprise applications, marketplaces and analytics applications.
+
+### IMPLEMENTATION
+
+```
+CREATE TABLE Products (
+    product_id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    price DECIMAL(10,2)
+);
+
+INSERT INTO Products(name, price)
+VALUES ('Tomato', 40.00);
+
+SELECT * FROM Products;
+```
+
+## B. Firebase
+
+### WHAT
+
+Firebase is Google's application development platform.
+
+It provides backend-related services such as databases, authentication, storage, hosting and messaging.
+
+### WHY
+
+Developers can use managed backend services without building every backend component from scratch.
+
+### HOW
+
+Applications communicate with Firebase SDKs and services.
+
+Depending on the product, Firebase may use a document database such as Cloud Firestore or a real-time JSON database.
+
+### WHERE
+
+- Mobile applications.
+- Authentication.
+- Real-time updates.
+- File storage.
+- Notifications.
+- Application hosting.
+
+### IMPLEMENTATION — Example Firestore structure
+
+```
+users
+  └── user_id
+        ├── name
+        └── email
+
+products
+  └── product_id
+        ├── name
+        └── price
+```
+
+Your RakshaNet resume lists Firebase as a backend service.&#x20;
+
+AkshayGabrieal_R_Resume.docx
+
+
+
+## C. Supabase
+
+### WHAT
+
+Supabase is an open-source backend platform built around PostgreSQL.
+
+### WHY
+
+It offers managed backend capabilities such as:
+
+- PostgreSQL database.
+- Authentication.
+- Storage.
+- Realtime functionality.
+- APIs.
+
+### HOW
+
+The application communicates with Supabase through its client libraries or APIs. Supabase can expose database functionality through generated APIs.
+
+### WHERE
+
+Mobile applications, web applications, authentication and database-backed applications.
+
+### IMPLEMENTATION
+
+A conceptual Python example:
+
+```
+from supabase import create_clientsupabase = create_client(    SUPABASE_URL,    SUPABASE_KEY)response = supabase.table("products").select("*").execute()print(response.data)
+```
+
+Keep credentials in environment variables and never expose privileged service keys in frontend code.
+
+## D. MongoDB
+
+### WHAT
+
+MongoDB is a NoSQL document database.
+
+It stores data as BSON documents, a binary representation related to JSON.
+
+### WHY
+
+It supports flexible document structures and applications where records may have varying fields.
+
+### HOW
+
+Instead of storing records mainly as relational tables, it organizes data into collections of documents.
+
+### WHERE
+
+Content management, product catalogs, applications with flexible data models and event-oriented systems.
+
+### IMPLEMENTATION
+
+```
+db.products.insertOne({
+    name: "Tomato",
+    price: 40,
+    category: "Vegetables"
+});
+
+db.products.find({ price: 40 });
+```
+
+### Comparison
+
+| Feature        | PostgreSQL                       | Firebase             | Supabase                 | MongoDB                       |
+| -------------- | -------------------------------- | -------------------- | ------------------------ | ----------------------------- |
+| Main type      | Relational                       | Backend platform     | Backend platform         | NoSQL document database       |
+| Data model     | Tables                           | Depends on service   | PostgreSQL tables        | Documents                     |
+| SQL            | Yes                              | Depends on service   | Yes                      | No SQL query language         |
+| Authentication | Can integrate with auth systems  | Built-in service     | Built-in service         | Usually integrated separately |
+| Main strength  | Relational data and transactions | Managed app services | PostgreSQL-based backend | Flexible document structure   |
+
+### Common interview question
+
+Why PostgreSQL instead of MongoDB?
+
+"PostgreSQL is a good choice when data has well-defined relationships, strong relational constraints and transactional requirements. MongoDB is useful when a flexible document-oriented data model is more suitable. The selection depends on the application's data structure and access patterns."
+
+Why Firebase or Supabase?
+
+"Both provide managed backend capabilities and reduce the need to build every backend service manually. Firebase has a broad managed application-services ecosystem, while Supabase is built around PostgreSQL and provides additional backend services."
+
+Part 5: Resume project defense, internships and behavioral interview
+
+# 18. Your four projects — complete technical defense
+
+Highest personal priority
+
+Your resume lists RakshaNet, Cloud Cart, CarbonMind AI and Farm Marketplace. Interviewers can ask you about every technology you have mentioned in these projects.&#x20;
+
+AkshayGabrieal_R_Resume.docx
+
+
+
+My recommendation: Be able to explain the complete architecture and your actual contribution to each project. Do not simply memorize technology names.
+
+## Project 1 — RakshaNet: Women Safety Application
+
+[Women Safety App UI by Rabonty Roy on Dribbble](https://images.openai.com/static-rsc-4/DjvbKDDtlIRxYCKrjZJotqsZfRkqPBqaVNOKRIDiss_faH5--hyQg6Ufw9w1sXqxMjXatGED2uci4zcZ3jsA3pk_aslnDQfXXa_JormsxE96b-9FGRcb5WbT4B-RjABnKzzeQl_nxy5fmHClYEB5IGR1kuRR0ck_1oVLYl2WDEs?purpose=inline)
+
+Technology stack from resume
+
+TypeScript, Firebase, Android Studio and Leaflet Maps API.
+
+SOS alerts · GPS sharing · Offline emergency functionality
+
+### WHAT
+
+RakshaNet is a mobile safety application designed to provide emergency assistance through one-tap SOS alerts and location sharing.
+
+### WHY
+
+In an emergency, a user may not have enough time to manually contact multiple people or explain their location.
+
+The application attempts to simplify emergency communication.
+
+### HOW
+
+A possible architecture based on your resume:
+
+```
+Mobile Application
+       ↓
+SOS Button
+       ↓
+Emergency Handler
+       ↓
+Firebase Backend
+       ↓
+Alert Contacts
+
+GPS Location
+       ↓
+Leaflet Maps API
+       ↓
+Location Visualization
+```
+
+### WHERE
+
+- Emergency notifications.
+- Real-time location tracking.
+- Safety applications.
+- Mobile application development.
+
+### IMPLEMENTATION — Technologies
+
+| Technology      | Why it is used                                                    |
+| --------------- | ----------------------------------------------------------------- |
+| TypeScript      | Application development with types                                |
+| Android Studio  | Android development environment                                   |
+| Firebase        | Backend services                                                  |
+| Leaflet         | Interactive maps                                                  |
+| GPS             | Geographic location                                               |
+| Mesh networking | Potential peer-to-peer communication in disconnected environments |
+
+### Questions to prepare
+
+1. What problem does RakshaNet solve?
+2. How does the SOS button work?
+3. How do you obtain GPS coordinates?
+4. How does Firebase communicate with your application?
+5. What is the Leaflet Maps API?
+6. How do you visualize coordinates on a map?
+7. What is mesh networking?
+8. What happens when internet connectivity is lost?
+9. What security measures are important for location data?
+10. What are your project's limitations?
+
+Important technical clarification: Your resume mentions offline emergency functionality using mesh networking. Be prepared to describe the exact implemented communication technology and prototype limitations. Do not claim that Firebase alone provides offline peer-to-peer communication.
+
+## Project 2 — Cloud Cart: Cloud-Based E-Commerce Platform
+
+[Cart UI designs, themes, templates and downloadable graphic elements on Dribbble](https://images.openai.com/static-rsc-4/GJRx_4KsbyFzlZjHFGp1LHbdxe35cgVwruy5_UOWFcJ7iaI2163ciUsE7DLVZNltxYQrAUPePjNJWHlKuRvYVELHyCiNte9SvLDt4tMfOUGItUoCVtDfEV_E93uzRRNW34d9TIt5UPy58nvzK1UOxMk-0yNhHeiDRaWHyNb1ye0?purpose=inline)
+
+Technology stack from resume
+
+Node.js and AWS.
+
+Cloud-enabled e-commerce backend · REST APIs
+
+### WHAT
+
+Cloud Cart is a cloud-based e-commerce platform with a backend built using Node.js REST APIs and AWS services.
+
+### WHY
+
+Traditional applications hosted on one locally managed machine can face difficulties when traffic increases or users need access from different locations.
+
+Cloud infrastructure provides managed computing and deployment capabilities.
+
+### HOW
+
+A conceptual architecture:
+
+```
+Customer
+   ↓
+Frontend
+   ↓
+Node.js Backend
+   ↓
+Express REST APIs
+   ↓
+Business Logic
+   ↓
+Database
+   ↓
+AWS Infrastructure
+```
+
+### WHERE
+
+- E-commerce.
+- Online shopping.
+- Order management.
+- Product management.
+- Cloud-based applications.
+
+### IMPLEMENTATION
+
+Possible product endpoint:
+
+```
+app.get("/products", async (req, res) => {
+    try {
+        const products = await getProducts();
+
+        res.status(200).json(products);
+
+    } catch (error) {
+        res.status(500).json({
+            message: "Server error"
+        });
+    }
+});
+```
+
+This is an illustrative implementation pattern. Explain the actual database and AWS services you implemented in your project.
+
+### Questions to prepare
+
+1. What is e-commerce?
+2. Why did you select Node.js?
+3. What is Express?
+4. How do REST APIs work?
+5. Why use AWS?
+6. What is cloud deployment?
+7. How would you implement authentication?
+8. How would you secure payment-related APIs?
+9. How would you handle increased traffic?
+10. What is the difference between a frontend and backend?
+
+## Project 3 — CarbonMind AI: Sustainability Platform
+
+[AI Carbon Tracker  | Devpost](https://images.openai.com/static-rsc-4/RRs6ULhJcths6_T38L--rjqXqIDl4hWfS3tUUp43nyHFK0jReZgXhc7d6uWW_81RQfkyQeYfSnNlZxBgywZywzoQzOp2kiyH743h9aSTS2d9tUe9E6BfTcUnELN4h0e8T5SRDlAfE2WkXVjC9V5IOhj9csW9us3oj7ICJdeeIe8?purpose=inline)
+
+Technology stack from resume
+
+Python, TensorFlow, Pandas and Google AI Studio.
+
+Carbon footprint estimation · Personalized eco-friendly recommendations
+
+### WHAT
+
+CarbonMind AI is an AI-enabled sustainability platform that estimates a user's carbon footprint and generates personalized eco-friendly action plans.
+
+### WHY
+
+Individuals often lack clear information about how their daily activities contribute to environmental impact.
+
+The application aims to estimate that impact and provide actionable recommendations.
+
+### HOW
+
+Based on your resume, the application can be explained through two components:
+
+Component 1 — Carbon footprint estimation
+
+```
+User Inputs
+    ↓
+Data Processing
+    ↓
+Pandas
+    ↓
+Model / Calculation
+    ↓
+TensorFlow (where used)
+    ↓
+Carbon Footprint Estimate
+```
+
+Component 2 — AI recommendations
+
+```
+Carbon Footprint Results
+          ↓
+     Context / Prompt
+          ↓
+    Google AI Studio
+          ↓
+Personalized Eco-Friendly Plan
+```
+
+### WHERE
+
+- Sustainability.
+- Environmental impact estimation.
+- AI-powered recommendation systems.
+- Green technology.
+- Data analysis.
+
+### IMPLEMENTATION
+
+Example of a simple carbon-estimation calculation:
+
+```
+electricity = 100emission_factor = 0.7carbon_emission = electricity * emission_factorprint(carbon_emission)
+```
+
+This is a simplified illustrative calculation. Actual emission factors must be selected according to the appropriate location, source and measurement units.
+
+Example Pandas workflow:
+
+```
+import pandas as pddf = pd.read_csv("activity_data.csv")df = df.dropna()print(df.head())
+```
+
+### Questions to prepare
+
+1. What is carbon footprint?
+2. What is the difference between carbon dioxide and CO₂ equivalent?
+3. What data does your platform collect?
+4. How do you estimate carbon emissions?
+5. Where does Machine Learning fit?
+6. Why did you use TensorFlow?
+7. Why did you use Pandas?
+8. What is Google AI Studio?
+9. What is Generative AI's role?
+10. How are the eco-friendly recommendations generated?
+11. How do you evaluate the accuracy of carbon estimates?
+12. How would you improve the platform?
+
+Your competition achievements
+
+Your resume states that CarbonMind AI was selected among the Top 20 projects from 260+ submissions at the 1M1B program, and that it ranked in the Top 1,000 of 35,000+ participants in Google PromptWars Challenge 4. Be ready to explain what you personally built and presented.&#x20;
+
+AkshayGabrieal_R_Resume.docx
+
+AkshayGabrieal_R_Resume.docx
+
+
+
+## Project 4 — Farm Marketplace: AI-Agent and Blockchain Agricultural Marketplace
+
+[Agriarche | Upside Journal](https://images.openai.com/static-rsc-4/LAGuM2yWyWCGT3R3qKZQCrFc6fKYu3kx_VKPX5VufjkVBk8TfK5t_4x5piLGg-EPaNqWisGCHjDoLZTcWdGv86YMyrImiM6X9W8t5jSEWGBIY0FTo0Nbuz5oCR0N7HLswNH5IUcq5oJodNijCpD7dSYNvKcrp7W9GAEv_9ftx0c?purpose=inline)
+
+Project focus from resume
+
+Farmers, buyers and delivery partners, AI agent for order organization, blockchain-based trust layer.
+
+Final-year mobile marketplace project · Ongoing
+
+### WHAT
+
+A digital agricultural marketplace that connects farmers, customers and delivery partners.
+
+It incorporates an AI agent for organizing orders and a blockchain-based trust layer.
+
+### WHY
+
+Traditional agricultural supply chains may involve multiple intermediaries, limited price transparency and difficulties coordinating orders and deliveries.
+
+A marketplace can connect participants through one platform.
+
+### HOW
+
+Conceptual architecture:
+
+```
+Farmer           Buyer
+   ↓               ↓
+   └──── Mobile App ┘
+          ↓
+      Backend API
+          ↓
+     Database Layer
+          ↓
+    Order Management
+          ↓
+     AI Agent
+          ↓
+ Blockchain Trust Layer
+          ↓
+    Delivery Partner
+```
+
+### WHERE
+
+- Agricultural e-commerce.
+- Digital supply chains.
+- Order management.
+- AI-powered automation.
+- Blockchain-based traceability.
+
+### IMPLEMENTATION — Technology concepts to defend
+
+| Component          | Explanation                                                                |
+| ------------------ | -------------------------------------------------------------------------- |
+| Mobile application | Interface for farmers, buyers and delivery partners                        |
+| Backend API        | Handles requests and business logic                                        |
+| Database           | Stores users, products and orders                                          |
+| AI agent           | Helps organize or process orders                                           |
+| Tool calling       | Lets the AI agent interact with application functions                      |
+| Blockchain         | Provides a distributed ledger for selected records                         |
+| Smart contract     | Executes predefined blockchain logic                                       |
+| IPFS               | InterPlanetary File System, for distributed content addressing and storage |
+
+The last two are useful blockchain concepts to understand if they are part of your actual implementation.
+
+### Questions to prepare
+
+1. Why did you choose agriculture as your application domain?
+2. What are the different types of users?
+3. How does a farmer list a product?
+4. How does a buyer place an order?
+5. How are orders organized?
+6. Why introduce an AI agent?
+7. What tools can the agent access?
+8. What happens if an AI agent makes a wrong decision?
+9. What is blockchain?
+10. What is decentralization?
+11. What is a smart contract?
+12. What is IPFS?
+13. What is the blockchain trust layer?
+14. Why not store everything in a normal database?
+15. How do you handle authentication and authorization?
+
+### The most important project question
+
+"Why did you combine AI agents and blockchain?"
+
+Your answer should be:
+
+"AI agents and blockchain serve different responsibilities. The AI agent helps automate and organize order-related workflows, while the blockchain trust layer can provide tamper-evident records for selected transactions or events. Combining them helps address workflow automation and transaction transparency, without requiring every operation to be performed on-chain."
+
+Only describe functionality that your implementation actually supports.
+
+# 19. Internship and certification defense
+
+Your resume lists three internships. Prepare them using the same WHAT → WHY → HOW → WHERE → IMPLEMENTATION method.&#x20;
+
+AkshayGabrieal_R_Resume.docx
+
+
+
+## A. 1M1B Foundation — Microsoft Elevate
+
+### WHAT
+
+Green Skills and Applied AI internship.
+
+### WHY
+
+To understand sustainability challenges and apply AI and data analysis to real-world problems.
+
+### HOW
+
+Your resume reports:
+
+- 70+ hours of learning.
+- Green skills and AI.
+- Data analysis.
+- CarbonMind AI project.
+
+### WHERE
+
+Sustainability applications and AI-powered environmental solutions.
+
+### IMPLEMENTATION
+
+Explain how you worked on CarbonMind AI, what data or calculations were used, what you personally developed and how you evaluated the solution.
+
+Likely question: What did you learn from the internship?
+
+Suggested answer:
+
+"I learned how AI and data analysis can be applied to sustainability problems. I also developed CarbonMind AI, which focuses on carbon footprint estimation and personalized eco-friendly recommendations."
+
+## B. BharatCares — AI & Automation Intern
+
+### WHAT
+
+Internship focused on AI automation and Generative AI.
+
+### WHY
+
+To explore how natural-language instructions can simplify application development and business workflows.
+
+### HOW
+
+Your resume reports a Prompt-to-App project that turns natural-language prompts into functional, deployable websites.
+
+### WHERE
+
+AI-assisted software development, automation and intelligent virtual assistants.
+
+### IMPLEMENTATION
+
+Be ready to explain:
+
+```
+Natural-language Prompt
+       ↓
+AI Model
+       ↓
+Interpret Requirements
+       ↓
+Generate Code
+       ↓
+Application Output
+       ↓
+Testing / Deployment
+```
+
+Likely questions:
+
+- What is Prompt Engineering?
+- What is Agentic AI?
+- What is an Intelligent Virtual Agent?
+- How does AI generate code?
+- What is automation?
+- How do you validate generated code?
+
+## C. Edunet Foundation — IBM SkillsBuild
+
+### WHAT
+
+AI and Cloud internship.
+
+### WHY
+
+To learn how machine-learning solutions can be trained and deployed in cloud environments.
+
+### HOW
+
+Your resume states that you designed, trained and deployed an ML model using Python and IBM Cloud and used IBM watsonx.
+
+### WHERE
+
+Cloud-based AI and machine-learning applications.
+
+### IMPLEMENTATION
+
+Prepare this architecture:
+
+```
+Dataset
+   ↓
+Python
+   ↓
+Preprocessing
+   ↓
+ML Algorithm
+   ↓
+Model Training
+   ↓
+Evaluation
+   ↓
+IBM Cloud Deployment
+   ↓
+Model Access
+```
+
+Important question: What is IBM watsonx?
+
+IBM watsonx is IBM's AI and data platform family, including capabilities for building, deploying and governing AI solutions.
+
+Be prepared to identify the specific watsonx product or service you personally used.
+
+# 20. HR and behavioral interview
+
+Technical knowledge is only one part of the interview.
+
+Your resume also highlights NCC, state-level sports, national-level representation and technical competitions.&#x20;
+
+AkshayGabrieal_R_Resume.docx
+
+
+
+## Important HR questions
+
+| Question                                 | What the interviewer evaluates |
+| ---------------------------------------- | ------------------------------ |
+| Tell me about yourself                   | Communication and profile      |
+| Why should we hire you?                  | Value proposition              |
+| Why this company?                        | Research and interest          |
+| What are your strengths?                 | Self-awareness                 |
+| What is your weakness?                   | Honesty and improvement        |
+| Describe a failure                       | Learning ability               |
+| Describe a team conflict                 | Collaboration                  |
+| Tell me about leadership                 | Leadership                     |
+| Where do you see yourself in five years? | Career direction               |
+| Why should we select you over others?    | Confidence and differentiation |
+
+## How to answer using STAR
+
+STAR = Situation, Task, Action, Result.
+
+Example question:
+
+"Tell me about a time you demonstrated leadership."
+
+Your NCC experience can be a relevant example.
+
+```
+Situation
+   ↓
+Describe the situation.
+
+Task
+   ↓
+What responsibility did you have?
+
+Action
+   ↓
+What did you personally do?
+
+Result
+   ↓
+What happened and what did you learn?
+```
+
+For behavioral questions, use real examples instead of generic statements.
+
+# Final interview revision sheet
+
+Here are the abbreviations and full forms worth memorizing.
+
+| Term  | Full form                                                  |
+| ----- | ---------------------------------------------------------- |
+| AI    | Artificial Intelligence                                    |
+| ML    | Machine Learning                                           |
+| DL    | Deep Learning                                              |
+| NLP   | Natural Language Processing                                |
+| LLM   | Large Language Model                                       |
+| GenAI | Generative Artificial Intelligence                         |
+| RAG   | Retrieval-Augmented Generation                             |
+| API   | Application Programming Interface                          |
+| REST  | Representational State Transfer                            |
+| HTTP  | Hypertext Transfer Protocol                                |
+| HTTPS | Hypertext Transfer Protocol Secure                         |
+| URL   | Uniform Resource Locator                                   |
+| JSON  | JavaScript Object Notation                                 |
+| SQL   | Structured Query Language                                  |
+| DBMS  | Database Management System                                 |
+| RDBMS | Relational Database Management System                      |
+| OOP   | Object-Oriented Programming                                |
+| JWT   | JSON Web Token                                             |
+| CRUD  | Create, Read, Update, Delete                               |
+| ACID  | Atomicity, Consistency, Isolation, Durability              |
+| CNN   | Convolutional Neural Network                               |
+| RNN   | Recurrent Neural Network                                   |
+| LSTM  | Long Short-Term Memory                                     |
+| OCR   | Optical Character Recognition                              |
+| CV    | Computer Vision                                            |
+| NLP   | Natural Language Processing                                |
+| GPU   | Graphics Processing Unit                                   |
+| CPU   | Central Processing Unit                                    |
+| IDE   | Integrated Development Environment                         |
+| SDK   | Software Development Kit                                   |
+| CLI   | Command-Line Interface                                     |
+| CI/CD | Continuous Integration / Continuous Delivery or Deployment |
+| AWS   | Amazon Web Services                                        |
+| IaaS  | Infrastructure as a Service                                |
+| PaaS  | Platform as a Service                                      |
+| SaaS  | Software as a Service                                      |
+| IPFS  | InterPlanetary File System                                 |
+| IAM   | Identity and Access Management                             |
+| VPC   | Virtual Private Cloud                                      |
+| S3    | Simple Storage Service                                     |
+| KNN   | K-Nearest Neighbors                                        |
+| SVM   | Support Vector Machine                                     |
+| EDA   | Exploratory Data Analysis                                  |
+| MSE   | Mean Squared Error                                         |
+| F1    | F1-score (harmonic mean of precision and recall)           |
+| TP    | True Positive                                              |
+| TN    | True Negative                                              |
+| FP    | False Positive                                             |
+| FN    | False Negative                                             |
+
+Note: Some names such as Python, Flask, NumPy, Pandas and Git are product or project names, not acronyms with standard full forms.
+
+# How all your technologies connect
+
+This is probably the most important architecture to understand because it connects almost your entire resume.
+
+## End-to-end AI-powered application
+
+Frontend
+
+React / TypeScript / React Native
+
+REST API / Backend
+
+Node.js / Express / FastAPI / Flask
+
+Database
+
+PostgreSQL / Firebase / Supabase
+
+AI layer
+
+ML / DL / LLM
+
+RAG
+
+Embeddings / Vector DB
+
+Agent layer
+
+Tools / APIs / Actions
+
+Cloud and Deployment
+
+AWS / IBM Cloud / Vercel / Render
+
+This is a reference architecture. An actual application may use only some of these components, and the architecture should be adapted to its requirements.
+
+# Final self-assessment: Test your interview readiness
+
+10 technical questions
+
+0/10 attempted
+
+1\. What is the difference between a programming language and a framework?
+
+Show model answer
+
+2\. What is the difference between SQL and PostgreSQL?
+
+Show model answer
+
+3\. What is the difference between REST API and FastAPI?
+
+Show model answer
+
+4\. What is the difference between Pandas and NumPy?
+
+Show model answer
+
+5\. What is the difference between ML and DL?
+
+Show model answer
+
+6\. What is the difference between TensorFlow and OpenCV?
+
+Show model answer
+
+7\. What is the difference between RAG and fine-tuning?
+
+Show model answer
+
+8\. What is the difference between tool calling and an AI agent?
+
+Show model answer
+
+9\. Why use cloud computing?
+
+Show model answer
+
+10\. How does your CarbonMind AI work?
+
+Show model answer
+
+Evaluate my answers
+
+## My final recommendation
+
+You now have the complete first-pass map of your resume topics, their purpose, working, applications and basic implementation. But reading this guide alone does not establish practical mastery.
+
+Your biggest preparation priority should be being able to explain these four things without hesitation:
+
+1. Your technical foundation: Python, OOP, SQL, REST APIs and backend.
+2. Your AI foundation: ML, DL, TensorFlow, PyTorch and Computer Vision.
+3. Your GenAI foundation: LLMs, embeddings, RAG, vector databases, tool calling and agents.
+4. Your actual work: How you built RakshaNet, Cloud Cart, CarbonMind AI and Farm Marketplace.
+
+For each technology, practise speaking the WHAT → WHY → HOW → WHERE → IMPLEMENTATION sequence aloud. For each project, be ready to defend every technology you claim to have used.
+
+The objective is not to sound like someone who has memorized 50 definitions. It is to sound like a developer who understands why a technology was selected, how it works, and how to use it to solve an actual problem.
